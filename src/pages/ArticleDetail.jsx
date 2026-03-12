@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { articles } from '../data/articles';
 import { useLanguage } from '../context/LanguageContext';
@@ -7,6 +8,26 @@ export default function ArticleDetail() {
   const { id } = useParams();
   const { t } = useLanguage();
   const article = articles.find(a => a.id === id);
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observerRef.current.observe(el);
+    });
+
+    return () => observerRef.current?.disconnect();
+  }, [id]); // Re-run when id changes
 
   const getVal = (obj) => {
     if (obj && typeof obj === 'object' && (obj.ID || obj.EN)) {
@@ -40,7 +61,7 @@ export default function ArticleDetail() {
       </header>
 
       <div className="container">
-        <div className="article-detail__content-wrapper">
+        <div className="article-detail__content-wrapper reveal">
           <div 
             className="article-detail__body" 
             dangerouslySetInnerHTML={{ __html: getVal(article.content) }} 

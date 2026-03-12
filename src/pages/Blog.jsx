@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { articles } from '../data/articles';
 import { useLanguage } from '../context/LanguageContext';
@@ -5,6 +6,26 @@ import './Blog.css';
 
 export default function Blog() {
   const { t } = useLanguage();
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observerRef.current.observe(el);
+    });
+
+    return () => observerRef.current?.disconnect();
+  }, []);
 
   const getVal = (obj) => {
     if (obj && typeof obj === 'object' && (obj.ID || obj.EN)) {

@@ -82,5 +82,49 @@ export const articles = [
         <p>If a single wooden pallet board breaks, you can replace it. If a plastic pallet breaks, you have to throw the whole thing away. This makes wooden pallets more economical in the long run.</p>
       `
     }
+  },
+  {
+    id: 'sertifikasi-kayu-dan-keberlanjutan',
+    title: {
+      ID: 'Eko-Friendly: Pentingnya Sertifikasi Kayu dalam Logistik Modern',
+      EN: 'Eco-Friendly: The Importance of Wood Certification in Modern Logistics'
+    },
+    excerpt: {
+      ID: 'Dunia semakin peduli pada lingkungan. Ketahui mengapa menggunakan palet dari sumber kayu berkelanjutan bisa meningkatkan nilai brand Anda.',
+      EN: 'The world is increasingly concerned about the environment. Find out why using pallets from sustainable wood sources can increase your brand value.'
+    },
+    date: '14 Maret 2026',
+    author: 'Admin CV Putra Karya Abadi',
+    category: { ID: 'Edukasi', EN: 'Education' },
+    content: {
+      ID: `
+        <h2>Logistik Hijau: Tantangan dan Peluang</h2>
+        <p>Kesadaran akan kelestarian hutan kini menjadi standar industri global. Tidak hanya soal fungsionalitas, pemilihan material palet kini juga mempertimbangkan dampak ekologisnya.</p>
+        
+        <h3>Pentingnya Sumber Kayu Legal</h3>
+        <p>Kayu yang digunakan harus berasal dari hutan yang dikelola secara bertanggung jawab. Sertifikasi seperti SVLK (Sistem Verifikasi Legalitas Kayu) di Indonesia memastikan bahwa setiap batang kayu yang diolah memiliki legalitas yang jelas.</p>
+
+        <h3>Mengapa Memilih Palet Berkelanjutan?</h3>
+        <ul>
+          <li><strong>Meningkatkan Kepercayaan Mitra:</strong> Perusahaan multinasional kini mewajibkan supplier untuk memiliki standar eco-friendly.</li>
+          <li><strong>Regulasi Internasional:</strong> Banyak negara maju membatasi masuknya produk dari material kayu non-certified.</li>
+          <li><strong>Daur Ulang:</strong> Palet kayu jauh lebih mudah didaur ulang atau dijadikan biomassa dibanding material sintetis.</li>
+        </ul>
+      `,
+      EN: `
+        <h2>Green Logistics: Challenges and Opportunities</h2>
+        <p>Awareness of forest sustainability is now a global industry standard. Not just about functionality, the choice of pallet material now also considers its ecological impact.</p>
+        
+        <h3>The Importance of Legal Wood Sources</h3>
+        <p>The wood used must come from responsibly managed forests. Certifications such as SVLK (Timber Legality Verification System) in Indonesia ensure that every processed log has clear legality.</p>
+
+        <h3>Why Choose Sustainable Pallets?</h3>
+        <ul>
+          <li><strong>Increase Partner Trust:</strong> Multinational companies now require suppliers to have eco-friendly standards.</li>
+          <li><strong>International Regulations:</strong> Many developed countries limit the entry of products from non-certified wood materials.</li>
+          <li><strong>Recycling:</strong> Wooden pallets are much easier to recycle or turn into biomass compared to synthetic materials.</li>
+        </ul>
+      `
+    }
   }
 ];

@@ -15,7 +15,6 @@ export default function Navbar() {
   const navLinks = [
     { path: '/', label: lang === 'ID' ? 'Beranda' : 'Home' },
     { path: '/produk', label: lang === 'ID' ? 'Produk' : 'Products' },
-    { path: '/artikel', label: lang === 'ID' ? 'Artikel' : 'Insights' },
     { path: '/faq', label: 'FAQ' },
     { path: '/contact', label: lang === 'ID' ? 'Kontak' : 'Contact' },
   ];

@@ -11,6 +11,12 @@
   overflow: hidden;
 }
 
+.blog-hero .section-label {
+  color: #BEE3F8; /* Light Blue for high contrast */
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
 .blog-hero::before {
   content: '';
   position: absolute;
