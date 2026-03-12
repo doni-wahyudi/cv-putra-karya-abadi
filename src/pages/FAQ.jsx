@@ -1,94 +1,87 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaChevronDown, FaWhatsapp } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './FAQ.css';
 
 const WA_NUMBER = '6282112976961';
 
-const faqData = [
-  {
-    category: 'Umum',
-    items: [
-      {
-        q: 'Apa itu palet kayu?',
-        a: 'Palet kayu adalah alas datar yang digunakan untuk menopang barang saat penyimpanan atau pengangkutan. Palet membuat proses pemindahan barang lebih mudah dan efisien, terutama dengan alat seperti forklift atau hand pallet.'
-      },
-      {
-        q: 'Apa perbedaan palet kayu dan peti kayu?',
-        a: 'Palet kayu berfungsi sebagai alas untuk menumpuk dan memindahkan barang, sedangkan peti kayu berfungsi sebagai wadah tertutup untuk melindungi barang dari benturan dan cuaca selama pengiriman.'
-      },
-      {
-        q: 'Apakah palet hanya digunakan untuk pengiriman?',
-        a: 'Tidak. Palet juga bisa digunakan untuk penyimpanan di rak gudang, pengiriman logistik, display di toko atau pameran, dan berbagai kebutuhan industri lainnya.'
-      },
-    ]
-  },
-  {
-    category: 'Produk',
-    items: [
-      {
-        q: 'Jenis kayu apa yang digunakan?',
-        a: 'Kami menggunakan berbagai jenis kayu pilihan seperti kayu pinus, mahoni, meranti, dan jenis kayu keras lainnya sesuai kebutuhan dan budget Anda. Semua kayu yang kami gunakan berkualitas tinggi dan tahan lama.'
-      },
-      {
-        q: 'Apakah bisa custom ukuran?',
-        a: 'Tentu! Kami melayani pembuatan palet dan peti kayu dengan ukuran custom sesuai kebutuhan spesifik Anda. Tim kami akan membantu konsultasi untuk menentukan ukuran dan desain yang paling optimal.'
-      },
-      {
-        q: 'Apakah peti kayu aman untuk ekspor?',
-        a: 'Ya, kami menyediakan peti kayu khusus ekspor yang telah memenuhi standar ISPM-15 dengan perlakuan Heat Treatment (HT). Sertifikasi ini wajib untuk pengiriman kayu internasional.'
-      },
-      {
-        q: 'Berapa kapasitas beban palet kayu?',
-        a: 'Palet kayu standar kami mampu menahan beban hingga 1 ton, sedangkan palet heavy duty bisa menahan beban hingga 2 ton. Kapasitas dapat disesuaikan dengan kebutuhan Anda.'
-      },
-    ]
-  },
-  {
-    category: 'Pemesanan & Pengiriman',
-    items: [
-      {
-        q: 'Bagaimana cara memesan?',
-        a: 'Cukup hubungi kami via WhatsApp, sampaikan kebutuhan Anda (jenis, ukuran, jumlah), dan tim kami akan memberikan penawaran harga beserta estimasi waktu pengerjaan.'
-      },
-      {
-        q: 'Berapa lama waktu produksi?',
-        a: 'Waktu produksi bervariasi tergantung jumlah dan kompleksitas pesanan. Secara umum, untuk pesanan standar membutuhkan waktu 3-7 hari kerja. Untuk pesanan custom atau jumlah besar, akan kami informasikan saat penawaran.'
-      },
-      {
-        q: 'Apakah melayani pengiriman ke luar kota?',
-        a: 'Tentu! Kami melayani pengiriman ke seluruh Indonesia. Biaya pengiriman akan disesuaikan dengan lokasi dan jumlah pesanan Anda.'
-      },
-      {
-        q: 'Apakah ada minimum order?',
-        a: 'Kami tidak menetapkan minimum order yang rumit. Namun untuk efisiensi biaya produksi dan pengiriman, kami sarankan untuk berkonsultasi terlebih dahulu melalui WhatsApp.'
-      },
-    ]
-  }
-];
-
-function FAQItem({ item }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef(null);
-
-  return (
-    <div className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}>
-      <button className="faq-item__question" onClick={() => setIsOpen(!isOpen)}>
-        <span>{item.q}</span>
-        <FaChevronDown className="faq-item__arrow" />
-      </button>
-      <div
-        className="faq-item__answer"
-        ref={contentRef}
-        style={{ maxHeight: isOpen ? contentRef.current?.scrollHeight + 'px' : '0px' }}
-      >
-        <p>{item.a}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function FAQ() {
+  const { t } = useLanguage();
   const observerRef = useRef(null);
+
+  const faqData = [
+    {
+      category: t({ ID: 'Umum', EN: 'General' }),
+      items: [
+        {
+          q: t({ ID: 'Apa itu palet kayu?', EN: 'What is a wooden pallet?' }),
+          a: t({ 
+            ID: 'Palet kayu adalah alas datar yang digunakan untuk menopang barang saat penyimpanan atau pengangkutan. Palet membuat proses pemindahan barang lebih mudah dan efisien, terutama dengan alat seperti forklift atau hand pallet.',
+            EN: 'A wooden pallet is a flat base used to support goods during storage or transport. Pallets make the process of moving goods easier and more efficient, especially with tools like forklifts or hand pallets.'
+          })
+        },
+        {
+          q: t({ ID: 'Apa perbedaan palet kayu dan peti kayu?', EN: 'What is the difference between pallets and crates?' }),
+          a: t({ 
+            ID: 'Palet kayu berfungsi sebagai alas untuk menumpuk dan memindahkan barang, sedangkan peti kayu berfungsi sebagai wadah tertutup untuk melindungi barang dari benturan dan cuaca selama pengiriman.',
+            EN: 'A wooden pallet functions as a base for stacking and moving goods, while a wooden crate functions as a closed container to protect goods from impact and weather during shipment.'
+          })
+        },
+        {
+          q: t({ ID: 'Apakah palet hanya digunakan untuk pengiriman?', EN: 'Are pallets only used for shipping?' }),
+          a: t({ 
+            ID: 'Tidak. Palet juga bisa digunakan untuk penyimpanan di rak gudang, pengiriman logistik, display di toko atau pameran, dan berbagai kebutuhan industri lainnya.',
+            EN: 'No. Pallets can also be used for warehouse shelf storage, logistics shipping, displays in stores or exhibitions, and various other industrial needs.'
+          })
+        },
+      ]
+    },
+    {
+      category: t({ ID: 'Produk', EN: 'Products' }),
+      items: [
+        {
+          q: t({ ID: 'Jenis kayu apa yang digunakan?', EN: 'What types of wood are used?' }),
+          a: t({ 
+            ID: 'Kami menggunakan berbagai jenis kayu pilihan seperti kayu pinus, mahoni, meranti, dan jenis kayu keras lainnya sesuai kebutuhan dan budget Anda. Semua kayu yang kami gunakan berkualitas tinggi dan tahan lama.',
+            EN: 'We use various types of selected wood such as pine, mahogany, meranti, and other types of hardwood according to your needs and budget. All the wood we use is of high quality and durable.'
+          })
+        },
+        {
+          q: t({ ID: 'Apakah bisa custom ukuran?', EN: 'Can the size be customized?' }),
+          a: t({ 
+            ID: 'Tentu! Kami melayani pembuatan palet dan peti kayu dengan ukuran custom sesuai kebutuhan spesifik Anda. Tim kami akan membantu konsultasi untuk menentukan ukuran dan desain yang paling optimal.',
+            EN: 'Of course! We provide wooden pallet and crate manufacturing with custom sizes according to your specific needs. Our team will help consult to determine the most optimal size and design.'
+          })
+        },
+        {
+          q: t({ ID: 'Apakah peti kayu aman untuk ekspor?', EN: 'Are wooden crates safe for export?' }),
+          a: t({ 
+            ID: 'Ya, kami menyediakan peti kayu khusus ekspor yang telah memenuhi standar ISPM-15 dengan perlakuan Heat Treatment (HT). Sertifikasi ini wajib untuk pengiriman kayu internasional.',
+            EN: 'Yes, we provide special export crates that meet ISPM-15 standards with Heat Treatment (HT). This certification is mandatory for international wood shipments.'
+          })
+        },
+      ]
+    },
+    {
+      category: t({ ID: 'Pemesanan & Pengiriman', EN: 'Ordering & Shipping' }),
+      items: [
+        {
+          q: t({ ID: 'Bagaimana cara memesan?', EN: 'How to order?' }),
+          a: t({ 
+            ID: 'Cukup hubungi kami via WhatsApp, sampaikan kebutuhan Anda (jenis, ukuran, jumlah), dan tim kami akan memberikan penawaran harga beserta estimasi waktu pengerjaan.',
+            EN: 'Just contact us via WhatsApp, convey your needs (type, size, quantity), and our team will provide a price quote along with an estimation of processing time.'
+          })
+        },
+        {
+          q: t({ ID: 'Berapa lama waktu produksi?', EN: 'How long is the production time?' }),
+          a: t({ 
+            ID: 'Waktu produksi bervariasi tergantung jumlah dan kompleksitas pesanan. Secara umum, untuk pesanan standar membutuhkan waktu 3-7 hari kerja. Untuk pesanan custom atau jumlah besar, akan kami informasikan saat penawaran.',
+            EN: 'Production time varies depending on the quantity and complexity of the order. Generally, standard orders take 3-7 business days. For custom or large orders, we will inform you during the quotation process.'
+          })
+        },
+      ]
+    }
+  ];
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -111,20 +104,18 @@ export default function FAQ() {
 
   return (
     <main className="faq-page">
-      {/* Header */}
       <section className="faq-hero">
         <div className="container">
           <span className="section-label animate-fade-in-up">FAQ</span>
           <h1 className="faq-hero__title animate-fade-in-up delay-1">
-            Pertanyaan yang Sering Diajukan
+            {t({ ID: 'Pertanyaan yang Sering Diajukan', EN: 'Frequently Asked Questions' })}
           </h1>
           <p className="faq-hero__subtitle animate-fade-in-up delay-2">
-            Temukan jawaban untuk pertanyaan umum tentang produk dan layanan kami.
+            {t({ ID: 'Temukan jawaban untuk pertanyaan umum tentang produk dan layanan kami.', EN: 'Find answers to common questions about our products and services.' })}
           </p>
         </div>
       </section>
 
-      {/* FAQ Content */}
       <section className="faq-content section">
         <div className="container">
           <div className="faq-wrapper">
@@ -133,7 +124,7 @@ export default function FAQ() {
                 <h2 className="faq-category__title">{category.category}</h2>
                 <div className="faq-category__items">
                   {category.items.map((item, i) => (
-                    <FAQItem key={i} item={item} />
+                    <FAQItem key={i} q={item.q} a={item.a} />
                   ))}
                 </div>
               </div>
@@ -142,24 +133,44 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="faq-cta section">
         <div className="container">
           <div className="faq-cta__card reveal">
-            <h2>Masih Ada Pertanyaan?</h2>
-            <p>Tim kami siap membantu menjawab semua pertanyaan Anda melalui WhatsApp.</p>
+            <h2>{t({ ID: 'Masih Ada Pertanyaan?', EN: 'Still Have Questions?' })}</h2>
+            <p>{t({ ID: 'Tim kami siap membantu menjawab semua pertanyaan Anda melalui WhatsApp.', EN: 'Our team is ready to help answer all your questions via WhatsApp.' })}</p>
             <a
-              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Halo, saya ingin bertanya lebih lanjut tentang produk palet/peti kayu.')}`}
+              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t({ ID: 'Halo, saya ingin bertanya lebih lanjut tentang produk palet/peti kayu.', EN: 'Hello, I would like to ask more about pallet/crate products.' }))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-lg"
             >
               <FaWhatsapp size={20} />
-              Tanya via WhatsApp
+              {t({ ID: 'Tanya via WhatsApp', EN: 'Ask via WhatsApp' })}
             </a>
           </div>
         </div>
       </section>
     </main>
+  );
+}
+
+function FAQItem({ q, a }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}>
+      <button className="faq-item__question" onClick={() => setIsOpen(!isOpen)}>
+        <span>{q}</span>
+        <FaChevronDown className="faq-item__arrow" />
+      </button>
+      <div
+        className="faq-item__answer"
+        ref={contentRef}
+        style={{ maxHeight: isOpen ? contentRef.current?.scrollHeight + 'px' : '0px' }}
+      >
+        <p>{a}</p>
+      </div>
+    </div>
   );
 }

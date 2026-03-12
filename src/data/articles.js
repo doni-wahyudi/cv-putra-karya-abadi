@@ -1,0 +1,86 @@
+export const articles = [
+  {
+    id: 'cara-memilih-palet-kayu-export',
+    title: {
+      ID: 'Panduan Lengkap Memilih Palet Kayu untuk Kebutuhan Ekspor',
+      EN: 'Complete Guide to Choosing Wooden Pallets for Export Needs'
+    },
+    excerpt: {
+      ID: 'Memilih palet untuk ekspor tidak boleh sembarangan. Ada standar ISPM-15 yang harus dipenuhi agar barang Anda tidak tertahan di bea cukai.',
+      EN: 'Choosing pallets for export should not be random. There are ISPM-15 standards that must be met so your goods are not detained at customs.'
+    },
+    date: '12 Maret 2026',
+    author: 'Admin CV Putra Karya Abadi',
+    category: { ID: 'Edukasi', EN: 'Education' },
+    content: {
+      ID: `
+        <h2>Standar ISPM-15: Kunci Ekspor Lancar</h2>
+        <p>Dalam dunia logistik internasional, standar ISPM-15 adalah hal yang wajib dipahami. Singkatan dari International Standards for Phytosanitary Measures No. 15, standar ini mengatur perlakuan terhadap material kemasan kayu guna mencegah penyebaran hama lintas negara.</p>
+        
+        <h3>Mengapa Kayu Harus Diproses?</h3>
+        <p>Kayu mentah seringkali membawa serangga atau parasit yang dapat merusak ekosistem di negara tujuan. Oleh karena itu, kayu yang digunakan untuk palet ekspor harus melalui salah satu dari dua proses:</p>
+        <ul>
+          <li><strong>Heat Treatment (HT):</strong> Kayu dipanaskan hingga suhu inti mencapai 56 derajat Celcius selama minimal 30 menit.</li>
+          <li><strong>Methyl Bromide (MB) Fumigation:</strong> Kayu difumigasi dengan bahan kimia tertentu.</li>
+        </ul>
+
+        <h3>Tips Memilih Palet Export</h3>
+        <p>1. Pastikan ada stempel gandum (standard Mark) pada palet.<br>
+        2. Pilih jenis kayu yang memiliki daya serap kelembaban rendah.<br>
+        3. Sesuaikan ukuran palet dengan standar container (ISO Pallet).</p>
+      `,
+      EN: `
+        <h2>ISPM-15 Standard: The Key to Smooth Export</h2>
+        <p>In the world of international logistics, the ISPM-15 standard is a must-understand. Standing for International Standards for Phytosanitary Measures No. 15, this standard regulates the treatment of wooden packaging materials to prevent the spread of pests across countries.</p>
+        
+        <h3>Why Must Wood Be Processed?</h3>
+        <p>Raw wood often carries insects or parasites that can damage ecosystems in the destination country. Therefore, wood used for export pallets must go through one of two processes:</p>
+        <ul>
+          <li><strong>Heat Treatment (HT):</strong> Wood is heated until the core temperature reaches 56 degrees Celsius for at least 30 minutes.</li>
+          <li><strong>Methyl Bromide (MB) Fumigation:</strong> Wood is fumigated with certain chemicals.</li>
+        </ul>
+
+        <h3>Tips for Choosing Export Pallets</h3>
+        <p>1. Ensure there is a wheat stamp (Standard Mark) on the pallet.<br>
+        2. Choose wood types that have low moisture absorption.<br>
+        3. Match the pallet size with container standards (ISO Pallet).</p>
+      `
+    }
+  },
+  {
+    id: 'keunggulan-palet-kayu-dibanding-plastik',
+    title: {
+      ID: 'Palet Kayu vs Palet Plastik: Mana yang Lebih Efisien?',
+      EN: 'Wooden Pallet vs Plastic Pallet: Which is More Efficient?'
+    },
+    excerpt: {
+      ID: 'Perdebatan antara palet kayu dan plastik selalu ada. Mari kita bedah perbandingannya dari sisi biaya dan lingkungan.',
+      EN: 'The debate between wooden and plastic pallets always exists. Let\'s break down the comparison in terms of cost and environment.'
+    },
+    date: '10 Maret 2026',
+    author: 'Admin CV Putra Karya Abadi',
+    category: { ID: 'Bisnis', EN: 'Business' },
+    content: {
+      ID: `
+        <h2>Kayu vs Plastik: Perbandingan Head-to-Head</h2>
+        <p>Banyak perusahaan bingung memilih antara palet kayu dan plastik. Meskipun plastik terlihat lebih modern, palet kayu tetap menguasai 90% pasar logistik dunia.</p>
+        
+        <h3>1. Investasi Awal</h3>
+        <p>Palet kayu jauh lebih murah (bisa 3-5 kali lipat lebih murah) dibanding palet plastik. Bagi bisnis yang memiliki risiko kehilangan palet tinggi, kayu adalah pilihan paling logis.</p>
+
+        <h3>2. Perbaikan dan Maintenance</h3>
+        <p>Jika satu papan palet kayu patah, Anda bisa menggantinya. Jika palet plastik pecah, Anda harus membuang semuanya. Ini membuat palet kayu lebih ekonomis dalam jangka panjang.</p>
+      `,
+      EN: `
+        <h2>Wood vs Plastic: Head-to-Head Comparison</h2>
+        <p>Many companies are confused between choosing wooden and plastic pallets. Although plastic looks more modern, wooden pallets still dominate 90% of the world\'s logistics market.</p>
+        
+        <h3>1. Initial Investment</h3>
+        <p>Wooden pallets are much cheaper (can be 3-5 times cheaper) than plastic pallets. For businesses with a high risk of losing pallets, wood is the most logical choice.</p>
+
+        <h3>2. Repair and Maintenance</h3>
+        <p>If a single wooden pallet board breaks, you can replace it. If a plastic pallet breaks, you have to throw the whole thing away. This makes wooden pallets more economical in the long run.</p>
+      `
+    }
+  }
+];

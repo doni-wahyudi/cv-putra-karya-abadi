@@ -7,24 +7,27 @@
 /* --- CSS Custom Properties --- */
 :root {
   /* Brand Colors (from logo) */
-  --color-primary: #1E3A5F;
-  --color-primary-dark: #152B47;
-  --color-primary-light: #2E5AAC;
-  --color-accent: #C41E24;
-  --color-accent-dark: #9E181D;
-  --color-accent-light: #E8383E;
+  /* Brand Colors - Industry Pro Palette */
+  --color-primary: #1A365D;      /* Deep Navy - Authority & Trust */
+  --color-primary-dark: #102A43;
+  --color-primary-light: #2A4365;
+  --color-accent: #C41E24;        /* Industrial Red - CTA */
+  --color-accent-dark: #A3191E;
+  --color-accent-light: #D6454A;
+  --color-wood: #F4EBE2;          /* Subtle Wood Tone background */
+  --color-slate: #4A5568;         /* Professional Slate */
 
   /* Neutrals */
-  --color-bg: #FAFAFA;
-  --color-bg-alt: #F0F2F5;
-  --color-bg-dark: #111827;
+  --color-bg: #F8FAFC;
+  --color-bg-alt: #EDF2F7;
+  --color-bg-dark: #1A202C;
   --color-bg-card: #FFFFFF;
-  --color-text: #1A1A2E;
-  --color-text-secondary: #6B7280;
-  --color-text-light: #9CA3AF;
+  --color-text: #1A202C;
+  --color-text-secondary: #4A5568;
+  --color-text-light: #718096;
   --color-text-inverse: #FFFFFF;
-  --color-border: #E5E7EB;
-  --color-border-light: #F3F4F6;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
 
   /* Functional */
   --color-success: #10B981;
@@ -76,6 +79,21 @@
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-blur: blur(12px);
+  --shadow-premium: 0 10px 40px -10px rgba(26, 54, 93, 0.15);
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-premium);
 }
 
 /* --- Reset & Base --- */

@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
 const WA_NUMBER = '6282112976961';
 
 export default function Contact() {
+  const { t } = useLanguage();
   const observerRef = useRef(null);
   const [form, setForm] = useState({
     nama: '',
@@ -39,164 +41,150 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `Halo CV Putra Karya Abadi,\n\nNama: ${form.nama}\nPerusahaan: ${form.perusahaan}\nKebutuhan: ${form.kebutuhan}\nJumlah: ${form.jumlah}\n\nPesan:\n${form.pesan}`;
+    const message = `${t({ ID: 'Halo CV Putra Karya Abadi', EN: 'Hello CV Putra Karya Abadi' })},\n\n${t({ ID: 'Nama', EN: 'Name' })}: ${form.nama}\n${t({ ID: 'Perusahaan', EN: 'Company' })}: ${form.perusahaan}\n${t({ ID: 'Kebutuhan', EN: 'Needs' })}: ${form.kebutuhan}\n${t({ ID: 'Jumlah', EN: 'Quantity' })}: ${form.jumlah}\n\n${t({ ID: 'Pesan', EN: 'Message' })}:\n${form.pesan}`;
     const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
   };
 
   return (
     <main className="contact-page">
-      {/* Header */}
       <section className="contact-hero">
         <div className="container">
-          <span className="section-label animate-fade-in-up">Kontak</span>
+          <span className="section-label animate-fade-in-up">{t({ ID: 'Kontak', EN: 'Contact' })}</span>
           <h1 className="contact-hero__title animate-fade-in-up delay-1">
-            Hubungi Kami
+            {t({ ID: 'Hubungi Kami', EN: 'Reach Out to Us' })}
           </h1>
           <p className="contact-hero__subtitle animate-fade-in-up delay-2">
-            Siap melayani konsultasi dan penawaran untuk kebutuhan palet & peti kayu Anda.
+            {t({ 
+              ID: 'Siap melayani konsultasi dan penawaran untuk kebutuhan palet & peti kayu Anda.',
+              EN: 'Ready to serve consultation and quotation for your wooden pallet & crate needs.'
+            })}
           </p>
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="contact-content section">
         <div className="container">
           <div className="contact-grid">
-            {/* Form */}
             <div className="contact-form-wrapper reveal">
-              <h2 className="contact-form__title">Form Permintaan Penawaran</h2>
+              <h2 className="contact-form__title">{t({ ID: 'Form Permintaan Penawaran', EN: 'Request a Quote Form' })}</h2>
               <p className="contact-form__desc">
-                Isi form di bawah ini dan pesan akan dikirimkan melalui WhatsApp.
+                {t({ ID: 'Isi form di bawah ini dan pesan akan dikirimkan melalui WhatsApp.', EN: 'Fill out the form below and the message will be sent via WhatsApp.' })}
               </p>
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="nama">Nama Lengkap</label>
+                  <label htmlFor="nama">{t({ ID: 'Nama Lengkap', EN: 'Full Name' })}</label>
                   <input
                     type="text"
                     id="nama"
                     name="nama"
                     value={form.nama}
                     onChange={handleChange}
-                    placeholder="Masukkan nama Anda"
+                    placeholder={t({ ID: 'Masukkan nama Anda', EN: 'Enter your name' })}
                     required
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="perusahaan">Nama Perusahaan</label>
+                  <label htmlFor="perusahaan">{t({ ID: 'Nama Perusahaan', EN: 'Company Name' })}</label>
                   <input
                     type="text"
                     id="perusahaan"
                     name="perusahaan"
                     value={form.perusahaan}
                     onChange={handleChange}
-                    placeholder="Nama perusahaan (opsional)"
+                    placeholder={t({ ID: 'Nama perusahaan (opsional)', EN: 'Company name (optional)' })}
                   />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="kebutuhan">Jenis Produk</label>
+                    <label htmlFor="kebutuhan">{t({ ID: 'Jenis Produk', EN: 'Product Type' })}</label>
                     <select
                       id="kebutuhan"
                       name="kebutuhan"
                       value={form.kebutuhan}
                       onChange={handleChange}
                     >
-                      <option>Palet Kayu Standar</option>
-                      <option>Palet Kayu Heavy Duty</option>
-                      <option>Palet Kayu Custom</option>
-                      <option>Peti Kayu Export</option>
-                      <option>Peti Kayu Mesin</option>
-                      <option>Peti Kayu Custom</option>
-                      <option>Lainnya</option>
+                      <option>{t({ ID: 'Palet Kayu Standar', EN: 'Standard Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Palet Kayu Heavy Duty', EN: 'Heavy Duty Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Palet Kayu Custom', EN: 'Custom Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Peti Kayu Export', EN: 'Export Wooden Crate' })}</option>
+                      <option>{t({ ID: 'Peti Kayu Mesin', EN: 'Machine Wooden Crate' })}</option>
+                      <option>{t({ ID: 'Peti Kayu Custom', EN: 'Custom Wooden Crate' })}</option>
+                      <option>{t({ ID: 'Lainnya', EN: 'Others' })}</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="jumlah">Jumlah (perkiraan)</label>
+                    <label htmlFor="jumlah">{t({ ID: 'Jumlah (perkiraan)', EN: 'Quantity (est.)' })}</label>
                     <input
                       type="text"
                       id="jumlah"
                       name="jumlah"
                       value={form.jumlah}
                       onChange={handleChange}
-                      placeholder="Contoh: 50 pcs"
+                      placeholder={t({ ID: 'Contoh: 50 pcs', EN: 'Example: 50 pcs' })}
                     />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="pesan">Pesan / Detail Kebutuhan</label>
+                  <label htmlFor="pesan">{t({ ID: 'Pesan / Detail Kebutuhan', EN: 'Message / Detail Needs' })}</label>
                   <textarea
                     id="pesan"
                     name="pesan"
                     value={form.pesan}
                     onChange={handleChange}
-                    placeholder="Jelaskan kebutuhan Anda (ukuran, material, deadline, dll.)"
+                    placeholder={t({ ID: 'Jelaskan kebutuhan Anda (ukuran, material, deadline, dll.)', EN: 'Explain your needs (size, material, deadline, etc.)' })}
                     rows="4"
                   />
                 </div>
                 <button type="submit" className="btn btn-whatsapp btn-lg contact-form__submit">
                   <FaWhatsapp size={20} />
-                  Kirim via WhatsApp
+                  {t({ ID: 'Kirim via WhatsApp', EN: 'Send via WhatsApp' })}
                 </button>
               </form>
             </div>
 
-            {/* Info */}
             <div className="contact-info reveal">
               <div className="contact-info-card">
-                <h3 className="contact-info__title">Informasi Kontak</h3>
+                <h3 className="contact-info__title">{t({ ID: 'Informasi Kontak', EN: 'Contact Information' })}</h3>
                 <div className="contact-info__items">
                   <div className="contact-info__item">
-                    <div className="contact-info__icon">
-                      <FaWhatsapp />
-                    </div>
+                    <div className="contact-info__icon"><FaWhatsapp /></div>
                     <div>
                       <span className="contact-info__label">WhatsApp</span>
-                      <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer">
-                        0821-1297-6961
-                      </a>
+                      <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer">0821-1297-6961</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
-                    <div className="contact-info__icon">
-                      <FaPhone />
-                    </div>
+                    <div className="contact-info__icon"><FaPhone /></div>
                     <div>
-                      <span className="contact-info__label">Telepon</span>
+                      <span className="contact-info__label">{t({ ID: 'Telepon', EN: 'Phone' })}</span>
                       <a href="tel:082112976961">0821-1297-6961</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
-                    <div className="contact-info__icon">
-                      <FaEnvelope />
-                    </div>
+                    <div className="contact-info__icon"><FaEnvelope /></div>
                     <div>
                       <span className="contact-info__label">Email</span>
                       <a href="mailto:info@putrakarya.com">info@putrakarya.com</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
-                    <div className="contact-info__icon">
-                      <FaMapMarkerAlt />
-                    </div>
+                    <div className="contact-info__icon"><FaMapMarkerAlt /></div>
                     <div>
-                      <span className="contact-info__label">Alamat</span>
+                      <span className="contact-info__label">{t({ ID: 'Alamat', EN: 'Address' })}</span>
                       <span>Indonesia</span>
                     </div>
                   </div>
                   <div className="contact-info__item">
-                    <div className="contact-info__icon">
-                      <FaClock />
-                    </div>
+                    <div className="contact-info__icon"><FaClock /></div>
                     <div>
-                      <span className="contact-info__label">Jam Operasional</span>
-                      <span>Senin - Sabtu, 08:00 - 17:00 WIB</span>
+                      <span className="contact-info__label">{t({ ID: 'Jam Operasional', EN: 'Business Hours' })}</span>
+                      <span>{t({ ID: 'Senin - Sabtu, 08:00 - 17:00 WIB', EN: 'Monday - Saturday, 08:00 - 17:00 WIB' })}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Map placeholder */}
               <div className="contact-map">
                 <iframe
                   title="Lokasi CV Putra Karya Abadi"

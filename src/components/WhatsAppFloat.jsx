@@ -1,11 +1,16 @@
 import { FaWhatsapp } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 import './WhatsAppFloat.css';
 
 const WA_NUMBER = '6282112976961';
-const WA_MESSAGE = 'Halo CV Putra Karya Abadi, saya ingin bertanya tentang produk palet/peti kayu.';
 
 export default function WhatsAppFloat() {
-  const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
+  const { t } = useLanguage();
+  const waMessage = t({ 
+    ID: 'Halo CV Putra Karya Abadi, saya ingin bertanya tentang produk palet/peti kayu.',
+    EN: 'Hello CV Putra Karya Abadi, I would like to ask about pallet/crate products.'
+  });
+  const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage)}`;
 
   return (
     <a
@@ -16,7 +21,7 @@ export default function WhatsAppFloat() {
       aria-label="Chat via WhatsApp"
     >
       <FaWhatsapp className="wa-float__icon" />
-      <span className="wa-float__label">Chat Kami</span>
+      <span className="wa-float__label">{t({ ID: 'Chat Kami', EN: 'Chat Us' })}</span>
     </a>
   );
 }

@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX, HiGlobeAlt } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
 import logo from '../assets/images/logo_cv_putra_karya_abadi.png';
+import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
-
-const navLinks = [
-  { path: '/', label: 'Beranda' },
-  { path: '/produk', label: 'Produk' },
-  { path: '/faq', label: 'FAQ' },
-  { path: '/contact', label: 'Kontak' },
-];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { lang, toggleLang } = useLanguage();
   const location = useLocation();
+
+  const navLinks = [
+    { path: '/', label: lang === 'ID' ? 'Beranda' : 'Home' },
+    { path: '/produk', label: lang === 'ID' ? 'Produk' : 'Products' },
+    { path: '/artikel', label: lang === 'ID' ? 'Artikel' : 'Insights' },
+    { path: '/faq', label: 'FAQ' },
+    { path: '/contact', label: lang === 'ID' ? 'Kontak' : 'Contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -41,7 +44,7 @@ export default function Navbar() {
           <img src={logo} alt="CV Putra Karya Abadi" className="navbar__logo" />
           <div className="navbar__brand-text">
             <span className="navbar__brand-name">CV Putra Karya Abadi</span>
-            <span className="navbar__brand-tagline">Palet & Peti Kayu</span>
+            <span className="navbar__brand-tagline">{lang === 'ID' ? 'Palet & Peti Kayu' : 'Pallet & Crate Solution'}</span>
           </div>
         </Link>
 
@@ -58,10 +61,20 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <button onClick={handleDownload} className="btn btn-accent navbar__download">
-            <FiDownload />
-            Company Profile
-          </button>
+          
+          <div className="navbar__actions">
+            <button 
+              className="navbar__lang-btn" 
+              onClick={toggleLang}
+              title="Ganti Bahasa"
+            >
+              <HiGlobeAlt /> {lang}
+            </button>
+            <button onClick={handleDownload} className="btn btn-accent navbar__download">
+              <FiDownload />
+              {lang === 'ID' ? 'Download Profil' : 'Download Profile'}
+            </button>
+          </div>
         </div>
 
         <button
