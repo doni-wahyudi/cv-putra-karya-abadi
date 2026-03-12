@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   FaWhatsapp, FaShippingFast, FaTools, FaHandshake,
   FaIndustry, FaWarehouse, FaGlobeAsia, FaCheckCircle,
-  FaFileDownload, FaArrowRight
+  FaFileDownload, FaArrowRight, FaQuoteLeft, FaStar,
+  FaChevronLeft, FaChevronRight
 } from 'react-icons/fa';
 import {
   MdPrecisionManufacturing, MdSupportAgent
@@ -86,6 +87,89 @@ export default function Beranda() {
     { num: '03', title: t({ ID: 'Produksi', EN: 'Production' }), desc: t({ ID: 'Tim kami mulai produksi sesuai spesifikasi yang telah disepakati.', EN: 'Our team starts production based on the agreed specifications.' }) },
     { num: '04', title: t({ ID: 'Pengiriman', EN: 'Delivery' }), desc: t({ ID: 'Palet/peti siap dikirimkan ke alamat Anda dengan aman.', EN: 'Pallets/crates are ready to be safely delivered to your address.' }) },
   ];
+
+  const testimonials = [
+    {
+      name: 'Bpk. Ahmad Fauzi',
+      role: 'Logistics Manager',
+      company: 'PT. Global Logistik Trans',
+      content: t({
+        ID: 'Pelayanan sangat cepat dan kualitas palet kayu sangat kokoh. Sangat membantu operasional gudang kami yang memiliki mobilitas tinggi.',
+        EN: 'Service is very fast and the quality of the wooden pallets is very sturdy. It really helps our warehouse operations which have high mobility.'
+      }),
+      rating: 5
+    },
+    {
+      name: 'Ibu Siska Amelia',
+      role: 'Procurement Specialist',
+      company: 'IndoManufacture Group',
+      content: t({
+        ID: 'Kami sudah berlangganan peti kayu custom di sini selama 2 tahun. Presisinya luar biasa dan harga sangat kompetitif dibanding supplier lain.',
+        EN: 'We have been subscribing to custom wooden crates here for 2 years. The precision is extraordinary and the price is very competitive compared to other suppliers.'
+      }),
+      rating: 5
+    },
+    {
+      name: 'Bpk. Heru Prasetyo',
+      role: 'Operations Director',
+      company: 'Sentosa Ekspor Pratama',
+      content: t({
+        ID: 'Sangat puas dengan standar ISPM-15 yang disediakan. Barang ekspor kami selalu aman dan tidak pernah ada kendala saat masuk ke pelabuhan internasional.',
+        EN: 'Very satisfied with the provided ISPM-15 standards. Our export goods are always safe and there have never been any obstacles when entering international ports.'
+      }),
+      rating: 5
+    },
+    {
+      name: 'Bpk. David Wijaya',
+      role: 'Supply Chain Manager',
+      company: 'TechChemical Indonesia',
+      content: t({
+        ID: 'Respon tim admin sangat cepat dan pengiriman selalu tepat waktu. Material kayu yang digunakan benar-benar berkualitas tinggi.',
+        EN: 'The admin team response is very fast and delivery is always on time. The wood material used is truly high quality.'
+      }),
+      rating: 5
+    },
+    {
+      name: 'Ibu Ratna Sari',
+      role: 'Business Owner',
+      company: 'Furniture Hub Export',
+      content: t({
+        ID: 'Peti kayu untuk pengiriman furniture kami selalu rapi dan kuat. Customer kami di luar negeri sering memuji keamanan packagingnya.',
+        EN: 'Wooden crates for our furniture shipments are always neat and strong. Our customers abroad often praise the safety of the packaging.'
+      }),
+      rating: 5
+    }
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState(3);
+
+  // Responsive items count for logic
+  useEffect(() => {
+    const updateVisible = () => {
+      if (window.innerWidth <= 768) setVisibleItems(1);
+      else if (window.innerWidth <= 1024) setVisibleItems(2);
+      else setVisibleItems(3);
+    };
+    updateVisible();
+    window.addEventListener('resize', updateVisible);
+    return () => window.removeEventListener('resize', updateVisible);
+  }, []);
+
+  const maxIndex = Math.max(0, testimonials.length - visibleItems);
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(handleNext, 5000);
+    return () => clearInterval(interval);
+  }, [maxIndex]);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -292,6 +376,67 @@ export default function Beranda() {
                 <p className="process-step__desc">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="testimonials section" id="testimoni" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-label">{t({ ID: 'Testimoni', EN: 'Testimonials' })}</span>
+            <h2 className="section-title">{t({ ID: 'Apa Kata Klien Kami?', EN: 'What Our Clients Say?' })}</h2>
+            <p className="section-subtitle">
+              {t({ ID: 'Kepercayaan klien adalah prioritas utama kami dalam menyediakan solusi packaging kayu terbaik.', EN: 'Client trust is our top priority in providing the best wooden packaging solutions.' })}
+            </p>
+          </div>
+          <div className="testimonials__slider-container">
+            <button className="slider-nav slider-nav--prev" onClick={handlePrev} aria-label="Previous review">
+              <FaChevronLeft />
+            </button>
+            <button className="slider-nav slider-nav--next" onClick={handleNext} aria-label="Next review">
+              <FaChevronRight />
+            </button>
+
+            <div className="testimonials__track-container">
+              <div 
+                className="testimonials__track" 
+                style={{ '--active-index': activeIndex }}
+              >
+                {testimonials.map((item, i) => (
+                  <div key={i} className="testimonial-card-wrapper">
+                    <div className="testimonial-card">
+                      <div className="testimonial-card__header">
+                        <div className="testimonial-card__quotes"><FaQuoteLeft /></div>
+                        <div className="testimonial-card__rating">
+                          {[...Array(item.rating)].map((_, idx) => (
+                            <FaStar key={idx} />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="testimonial-card__content">"{item.content}"</p>
+                      <div className="testimonial-card__author" style={{ borderTop: '1px solid var(--color-border-light)', paddingTop: 'var(--space-6)', marginTop: 'auto' }}>
+                        <div className="testimonial-card__info">
+                          <h4 className="testimonial-card__name">{item.name}</h4>
+                          <p className="testimonial-card__role">{item.role} - {item.company}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="testimonials__dots">
+              {testimonials.slice(0, maxIndex + 1).map((_, i) => (
+                <button
+                  key={i}
+                  className={`testimonials__dot ${i === activeIndex ? 'testimonials__dot--active' : ''}`}
+                  onClick={() => setActiveIndex(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
