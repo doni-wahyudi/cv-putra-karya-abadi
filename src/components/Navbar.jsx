@@ -60,10 +60,10 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          
+
           <div className="navbar__actions">
-            <button 
-              className="navbar__lang-btn" 
+            <button
+              className="navbar__lang-btn"
               onClick={toggleLang}
               title="Ganti Bahasa"
             >
@@ -71,7 +71,7 @@ export default function Navbar() {
             </button>
             <button onClick={handleDownload} className="btn btn-accent navbar__download">
               <FiDownload />
-              {lang === 'ID' ? 'Download Profil' : 'Download Profile'}
+              {lang === 'ID' ? 'Profil Perusahaan' : 'Company Profile'}
             </button>
           </div>
         </div>
