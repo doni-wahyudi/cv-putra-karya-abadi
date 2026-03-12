@@ -152,7 +152,7 @@ export default function Beranda() {
               </a>
               <button onClick={handleDownload} className="btn btn-outline btn-lg">
                 <FaFileDownload size={18} />
-                {t({ ID: 'Company Profile', EN: 'Company Profile' })}
+                {t({ ID: 'Profil Perusahaan', EN: 'Company Profile' })}
               </button>
             </div>
           </div>
