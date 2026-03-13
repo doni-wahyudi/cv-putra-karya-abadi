@@ -2,7 +2,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import './WhatsAppFloat.css';
 
-const WA_NUMBER = '6282112976961';
+const WA_NUMBER = '6282112976981';
 
 export default function WhatsAppFloat() {
   const { t } = useLanguage();

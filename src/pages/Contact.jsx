@@ -3,7 +3,7 @@ import { FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-
 import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
-const WA_NUMBER = '6282112976961';
+const WA_NUMBER = '6282112976981';
 
 export default function Contact() {
   const { t } = useLanguage();

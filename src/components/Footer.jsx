@@ -59,17 +59,23 @@ export default function Footer() {
             <ul className="footer__contact">
               <li>
                 <FaWhatsapp />
-                <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer">
-                  0821-1297-6961
+                <a href={`https://wa.me/6282112976981`} target="_blank" rel="noopener noreferrer">
+                  +62 821-1297-6981
                 </a>
               </li>
               <li>
+                <FaPhone />
+                <span>(021) 8911 9704</span>
+              </li>
+              <li>
                 <FaEnvelope />
-                <a href="mailto:info@putrakarya.com">info@putrakarya.com</a>
+                <a href="mailto:info@putrakaryapalet.com">info@putrakaryapalet.com</a>
               </li>
               <li>
                 <FaMapMarkerAlt />
-                <span>{t({ ID: 'Indonesia', EN: 'Indonesia' })}</span>
+                <span>
+                  Kp. Sempu RT 03/03 Ds. Pasirgombong, Kec. Cikarang Utara Kab. Bekasi 17530
+                </span>
               </li>
             </ul>
           </div>

@@ -5,7 +5,7 @@ import { products } from '../data/products';
 import { useLanguage } from '../context/LanguageContext';
 import './Produk.css';
 
-const WA_NUMBER = '6282112976961';
+const WA_NUMBER = '6282112976981';
 
 export default function Produk() {
   const { t, lang } = useLanguage();
@@ -44,14 +44,14 @@ export default function Produk() {
     <main className="produk-page">
       <header className="produk-hero">
         <div className="container">
-          <span className="section-label animate-fade-in-up">{t({ ID: 'Katalog Produk', EN: 'Product Catalog' })}</span>
+          <span className="section-label animate-fade-in-up">{t({ ID: 'Jenis Produk Custom', EN: 'Custom Product Types' })}</span>
           <h1 className="produk-hero__title animate-fade-in-up delay-1">
             {t({ ID: 'Solusi Pengemasan Kayu Terpercaya', EN: 'Trusted Wood Packaging Solutions' })}
           </h1>
           <p className="produk-hero__subtitle animate-fade-in-up delay-2">
             {t({ 
-              ID: 'Produk palet dan peti kayu berkualitas tinggi yang dirancang untuk keamanan logistik domestik maupun ekspor.',
-              EN: 'High-quality wooden pallet and crate products designed for domestic and export logistics security.'
+              ID: 'Kami memproduksi palet dan peti kayu sesuai kebutuhan industri Anda. Ukuran, ketebalan, dan kapasitas beban dapat disesuaikan sepenuhnya.',
+              EN: 'We produce wooden pallets and crates according to your industrial needs. Size, thickness, and load capacity can be fully customized.'
             })}
           </p>
         </div>
@@ -68,30 +68,33 @@ export default function Produk() {
                     {item.image && <img src={item.image} alt={getVal(item.name)} className="product-card__img" />}
                     <span className="product-card__tag">{getVal(item.tag)}</span>
                   </div>
-                  <div className="product-card__header">
-                    <h3 className="product-card__name">{getVal(item.name)}</h3>
-                    <p className="product-card__desc">{getVal(item.desc)}</p>
-                  </div>
-                  <div className="product-card__specs">
-                    {item.specs.slice(0, 3).map((spec, si) => (
-                      <div key={si} className="product-card__spec">
-                        <FaCheckCircle />
-                        <span>{getVal(spec.label)}: {getVal(spec.value)}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="product-card__actions">
-                    <Link to={`/produk/${item.id}`} className="btn btn-outline product-card__btn">
-                      <FaInfoCircle size={16} /> {t({ ID: 'Detail', EN: 'Details' })}
-                    </Link>
-                    <a
-                      href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t({ ID: `Halo, saya ingin bertanya tentang ${getVal(item.name)}.`, EN: `Hello, I would like to ask about ${getVal(item.name)}.` }))}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-whatsapp product-card__btn"
-                    >
-                      <FaWhatsapp size={16} /> WhatsApp
-                    </a>
+                  <div className="product-card__content">
+                    <div className="product-card__header">
+                      <h3 className="product-card__name">{getVal(item.name)}</h3>
+                      <p className="product-card__desc">{getVal(item.desc)}</p>
+                    </div>
+                    <div className="product-card__specs">
+                      <p className="product-card__types-label">{t({ ID: 'Jenis yang dapat kami buat:', EN: 'Types we can manufacture:' })}</p>
+                      {item.features.map((feature, fi) => (
+                        <div key={fi} className="product-card__spec">
+                          <FaCheckCircle />
+                          <span>{getVal(feature)}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="product-card__actions">
+                      <Link to={`/produk/${item.id}`} className="btn btn-outline product-card__btn">
+                        <FaInfoCircle size={16} /> {t({ ID: 'Detail', EN: 'Details' })}
+                      </Link>
+                      <a
+                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t({ ID: `Halo, saya ingin bertanya tentang ${getVal(item.name)}.`, EN: `Hello, I would like to ask about ${getVal(item.name)}.` }))}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-whatsapp product-card__btn"
+                      >
+                        <FaWhatsapp size={16} /> WhatsApp
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}

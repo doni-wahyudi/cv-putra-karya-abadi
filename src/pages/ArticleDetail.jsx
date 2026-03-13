@@ -75,7 +75,7 @@ export default function ArticleDetail() {
                 EN: 'Our expert team is ready to help you choose the best wooden pallet and crate solutions for your business.'
               })}</p>
               <a 
-                href="https://wa.me/6282112976961" 
+                href="https://wa.me/6282112976981" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-whatsapp"

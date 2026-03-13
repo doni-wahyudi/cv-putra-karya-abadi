@@ -30,10 +30,7 @@ export default function Navbar() {
   }, [location]);
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/CV_Putra_Karya_Abadi.pdf';
-    link.download = 'Company_Profile_CV_Putra_Karya_Abadi.pdf';
-    link.click();
+    window.open('./CV_Putra_Karya_Abadi.pdf', '_blank');
   };
 
   return (

@@ -3,7 +3,7 @@ import { FaChevronDown, FaWhatsapp } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import './FAQ.css';
 
-const WA_NUMBER = '6282112976961';
+const WA_NUMBER = '6282112976981';
 
 export default function FAQ() {
   const { t } = useLanguage();

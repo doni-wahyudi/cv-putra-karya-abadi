@@ -11,13 +11,40 @@ import {
 import { Link } from 'react-router-dom';
 import heroImg from '../assets/images/hero_factory.png';
 import { useLanguage } from '../context/LanguageContext';
+import { products } from '../data/products';
 import './Beranda.css';
 
-const WA_NUMBER = '6282112976961';
+// Gallery Images
+import gallery1 from '../assets/images/gallery/gallery1.jpeg';
+import gallery2 from '../assets/images/gallery/gallery2.jpeg';
+import gallery3 from '../assets/images/gallery/gallery3.jpeg';
+import gallery4 from '../assets/images/gallery/gallery4.jpeg';
+import gallery5 from '../assets/images/gallery/gallery5.jpeg';
+import gallery6 from '../assets/images/gallery/gallery6.jpeg';
+import gallery7 from '../assets/images/gallery/gallery7.jpeg';
+import gallery8 from '../assets/images/gallery/gallery8.jpeg';
+import gallery9 from '../assets/images/gallery/gallery9.jpeg';
+
+// Partner Logos
+import partner1 from '../assets/images/partner/partner1.png';
+import partner2 from '../assets/images/partner/partner2.png';
+import partner3 from '../assets/images/partner/partner3.png';
+import partner4 from '../assets/images/partner/partner4.png';
+import partner5 from '../assets/images/partner/partner5.png';
+import partner6 from '../assets/images/partner/partner6.png';
+
+const WA_NUMBER = '6282112976981';
 
 export default function Beranda() {
   const { lang, t } = useLanguage();
   const observerRef = useRef(null);
+
+  const getVal = (obj) => {
+    if (obj && typeof obj === 'object' && (obj.ID || obj.EN)) {
+      return t(obj);
+    }
+    return obj;
+  };
 
   const keunggulan = [
     {
@@ -70,15 +97,25 @@ export default function Beranda() {
     },
   ];
 
-  const clients = [
-    t({ ID: 'Pabrik Manufaktur', EN: 'Manufacturing Factories' }),
-    t({ ID: 'Perusahaan Logistik', EN: 'Logistics Companies' }),
-    t({ ID: 'Eksportir & Importir', EN: 'Exporters & Importers' }),
-    t({ ID: 'Industri Farmasi', EN: 'Pharmaceutical Industry' }),
-    t({ ID: 'Industri Elektronik', EN: 'Electronics Industry' }),
-    t({ ID: 'Industri Makanan & Minuman', EN: 'Food & Beverage Industry' }),
-    t({ ID: 'Perusahaan Pertambangan', EN: 'Mining Companies' }),
-    t({ ID: 'Gudang & Distribusi', EN: 'Warehouse & Distribution' }),
+  const galleryImages = [
+    { src: gallery1, alt: 'Produksi Palet 1' },
+    { src: gallery2, alt: 'Produksi Palet 2' },
+    { src: gallery3, alt: 'Palet Kayu Berkualitas' },
+    { src: gallery4, alt: 'Workshop Palet' },
+    { src: gallery5, alt: 'Peti Kayu Custom' },
+    { src: gallery6, alt: 'Proses Pengerjaan' },
+    { src: gallery7, alt: 'Stok Kayu' },
+    { src: gallery8, alt: 'Pengiriman Palet' },
+    { src: gallery9, alt: 'Tim Produksi' },
+  ];
+
+  const partners = [
+    { src: partner1, name: 'Partner 1' },
+    { src: partner2, name: 'Partner 2' },
+    { src: partner3, name: 'Partner 3' },
+    { src: partner4, name: 'Partner 4' },
+    { src: partner5, name: 'Partner 5' },
+    { src: partner6, name: 'Partner 6' },
   ];
 
   const steps = [
@@ -191,10 +228,9 @@ export default function Beranda() {
   }, []);
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/CV_Putra_Karya_Abadi.pdf';
-    link.download = 'Company_Profile_CV_Putra_Karya_Abadi.pdf';
-    link.click();
+    // For GitHub Pages, use a relative path from the base URL or absolute path if it works.
+    // Given the public folder structure, this should work locally and on GH Pages if PDF is in public/
+    window.open('./CV_Putra_Karya_Abadi.pdf', '_blank');
   };
 
   const WA_MESSAGE = t({ 
@@ -281,16 +317,16 @@ export default function Beranda() {
               </p>
               <div className="about__stats">
                 <div className="about__stat">
+                  <span className="about__stat-number">8+</span>
+                  <span className="about__stat-label">{t({ ID: 'Tahun Pengalaman', EN: 'Years Experience' })}</span>
+                </div>
+                <div className="about__stat">
                   <span className="about__stat-number">500+</span>
                   <span className="about__stat-label">{t({ ID: 'Proyek Selesai', EN: 'Completed Projects' })}</span>
                 </div>
                 <div className="about__stat">
                   <span className="about__stat-number">100+</span>
                   <span className="about__stat-label">{t({ ID: 'Klien Puas', EN: 'Satisfied Clients' })}</span>
-                </div>
-                <div className="about__stat">
-                  <span className="about__stat-number">24/7</span>
-                  <span className="about__stat-label">{t({ ID: 'Layanan Support', EN: 'Support Service' })}</span>
                 </div>
               </div>
             </div>
@@ -337,21 +373,72 @@ export default function Beranda() {
         </div>
       </section>
 
-      {/* Portofolio Client */}
-      <section className="clients section" id="portofolio" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+      {/* Product Preview Shortcut */}
+      <section className="product-preview section" id="produk">
         <div className="container">
           <div className="section-header reveal">
-            <span className="section-label">{t({ ID: 'Portofolio Klien', EN: 'Client Portfolio' })}</span>
-            <h2 className="section-title">{t({ ID: 'Dipercaya oleh Berbagai Industri', EN: 'Trusted by Various Industries' })}</h2>
+            <span className="section-label">{t({ ID: 'Produk Kami', EN: 'Our Products' })}</span>
+            <h2 className="section-title">{t({ ID: 'Solusi Palet & Peti Kayu Custom', EN: 'Custom Pallet & Crate Solutions' })}</h2>
             <p className="section-subtitle">
-              {t({ ID: 'Kami telah melayani ratusan klien dari berbagai sektor industri di Indonesia.', EN: 'We have served hundreds of clients from various industrial sectors in Indonesia.' })}
+              {t({ 
+                ID: 'Kami menyediakan solusi pengemasan kayu yang disesuaikan sepenuhnya dengan kebutuhan spesifik industri Anda.',
+                EN: 'We provide wooden packaging solutions fully customized to your specific industrial needs.'
+              })}
             </p>
           </div>
-          <div className="clients__grid reveal">
-            {clients.map((client, i) => (
-              <div key={i} className="client-card">
-                <FaCheckCircle className="client-card__icon" />
-                <span className="client-card__name">{client}</span>
+          <div className="product-preview__grid reveal">
+            {products.map((item, i) => (
+              <div key={i} className="product-preview__card">
+                <div className="product-preview__img-box">
+                  <img src={item.image} alt={getVal(item.name)} className="product-preview__img" />
+                </div>
+                <div className="product-preview__content">
+                  <h3 className="product-preview__name">{getVal(item.name)}</h3>
+                  <p className="product-preview__desc">{getVal(item.desc)}</p>
+                  <Link to="/produk" className="btn btn-primary btn-sm">
+                    {t({ ID: 'Detail & Konsultasi', EN: 'Details & Consultation' })} <FaArrowRight style={{ marginLeft: '8px' }} size={12} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portofolio Gallery */}
+      <section className="gallery section" id="portofolio" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-label">{t({ ID: 'Galeri Produksi', EN: 'Production Gallery' })}</span>
+            <h2 className="section-title">{t({ ID: 'Portofolio Pengerjaan Kami', EN: 'Our Work Portfolio' })}</h2>
+            <p className="section-subtitle">
+              {t({ ID: 'Dokumentasi nyata dari workshop dan hasil produksi palet/peti kayu kami.', EN: 'Real documentation from our workshop and wooden pallet/crate production.' })}
+            </p>
+          </div>
+          <div className="gallery__grid reveal">
+            {galleryImages.map((img, i) => (
+              <div key={i} className="gallery__item">
+                <img src={img.src} alt={img.alt} className="gallery__img" loading="lazy" />
+                <div className="gallery__overlay">
+                  <span className="gallery__caption">{img.alt}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted Partners */}
+      <section className="partners section">
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-label">{t({ ID: 'Mitra Kami', EN: 'Our Partners' })}</span>
+            <h2 className="section-title">{t({ ID: 'Mitra Terpercaya', EN: 'Trusted Partners' })}</h2>
+          </div>
+          <div className="partners__grid reveal">
+            {partners.map((partner, i) => (
+              <div key={i} className="partner-item">
+                <img src={partner.src} alt={partner.name} className="partner-logo" />
               </div>
             ))}
           </div>
@@ -368,14 +455,16 @@ export default function Beranda() {
               {t({ ID: 'Hanya 4 langkah mudah untuk mendapatkan palet & peti kayu berkualitas.', EN: 'Only 4 easy steps to get quality wooden pallets & crates.' })}
             </p>
           </div>
-          <div className="process__grid reveal">
-            {steps.map((step, i) => (
-              <div key={i} className="process-step">
-                <div className="process-step__num">{step.num}</div>
-                <h3 className="process-step__title">{step.title}</h3>
-                <p className="process-step__desc">{step.desc}</p>
-              </div>
-            ))}
+          <div className="process__container reveal">
+            <div className="process__grid">
+              {steps.map((step, i) => (
+                <div key={i} className="process-step">
+                  <div className="process-step__num text-outline">{step.num}</div>
+                  <h3 className="process-step__title">{step.title}</h3>
+                  <p className="process-step__desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

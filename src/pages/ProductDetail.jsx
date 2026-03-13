@@ -44,7 +44,7 @@ ${t({ ID: 'Detail Pesanan:', EN: 'Order Details:' })}
 - ${t({ ID: 'Catatan:', EN: 'Notes:' })} ${formData.note || '-'}
 
 ${t({ ID: 'Mohon informasi harga dan estimasi waktunya. Terima kasih.', EN: 'Please provide price information and time estimation. Thank you.' })}`;
-    return `https://wa.me/6282112976961?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/6282112976981?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -64,7 +64,7 @@ ${t({ ID: 'Mohon informasi harga dan estimasi waktunya. Terima kasih.', EN: 'Ple
           <div className="product-detail__content">
             <span className="product-detail__tag">{getVal(product.tag)}</span>
             <h1 className="product-detail__title">{getVal(product.name)}</h1>
-            <p className="product-detail__desc">{getVal(product.detailedDesc)}</p>
+            <p className="product-detail__desc">{getVal(product.detailedDesc) || getVal(product.desc)}</p>
 
             <div className="product-detail__features">
               {product.features.map((f, i) => (
