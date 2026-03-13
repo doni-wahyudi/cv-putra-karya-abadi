@@ -74,7 +74,7 @@ export default function Footer() {
               <li>
                 <FaMapMarkerAlt />
                 <span>
-                  Kp. Sempu RT 03/03 Ds. Pasirgombong, Kec. Cikarang Utara Kab. Bekasi 17530
+                  {t({ ID: 'Kp. Sempu RT 03/03, Ds. Pasirgombong, Kec. Cikarang Utara, Kab. Bekasi 17530', EN: 'Kp. Sempu RT 03/03, Pasirgombong, North Cikarang, Bekasi 17530' })}
                 </span>
               </li>
             </ul>

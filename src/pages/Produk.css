@@ -206,6 +206,11 @@
 
   .produk-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .product-card__image-box {
+    height: 220px; /* Adjust height for better fit on mobile screens */
   }
 
   .produk-cta__card {

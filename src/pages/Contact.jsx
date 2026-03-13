@@ -6,7 +6,7 @@ import './Contact.css';
 const WA_NUMBER = '6282112976981';
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const observerRef = useRef(null);
   const [form, setForm] = useState({
     nama: '',
@@ -151,28 +151,28 @@ export default function Contact() {
                     <div className="contact-info__icon"><FaWhatsapp /></div>
                     <div>
                       <span className="contact-info__label">WhatsApp</span>
-                      <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer">0821-1297-6961</a>
+                      <a href={`https://wa.me/${WA_NUMBER}`} target="_blank" rel="noopener noreferrer">+62 821-1297-6981</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
                     <div className="contact-info__icon"><FaPhone /></div>
                     <div>
-                      <span className="contact-info__label">{t({ ID: 'Telepon', EN: 'Phone' })}</span>
-                      <a href="tel:082112976961">0821-1297-6961</a>
+                      <span className="contact-info__label">{t({ ID: 'Telepon / Fax', EN: 'Phone / Fax' })}</span>
+                      <a href="tel:+62218911970">(021) 8911 9704</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
                     <div className="contact-info__icon"><FaEnvelope /></div>
                     <div>
                       <span className="contact-info__label">Email</span>
-                      <a href="mailto:info@putrakarya.com">info@putrakarya.com</a>
+                      <a href="mailto:info@putrakaryapalet.com">info@putrakaryapalet.com</a>
                     </div>
                   </div>
                   <div className="contact-info__item">
                     <div className="contact-info__icon"><FaMapMarkerAlt /></div>
                     <div>
                       <span className="contact-info__label">{t({ ID: 'Alamat', EN: 'Address' })}</span>
-                      <span>Indonesia</span>
+                      <span>{lang === 'ID' ? 'Kp. Sempu RT 03/03, Ds. Pasirgombong, Kec. Cikarang Utara, Kab. Bekasi 17530' : 'Kp. Sempu RT 03/03, Pasirgombong, North Cikarang, Bekasi 17530'}</span>
                     </div>
                   </div>
                   <div className="contact-info__item">
@@ -188,7 +188,7 @@ export default function Contact() {
               <div className="contact-map">
                 <iframe
                   title="Lokasi CV Putra Karya Abadi"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2!2d106.8!3d-6.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjQnMDAuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.5!2d107.15!3d-6.32!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991!2sCikarang%20Utara%2C%20Bekasi!5e0!3m2!1sen!2sid!4v1"
                   width="100%"
                   height="220"
                   style={{ border: 0, borderRadius: 'var(--radius-lg)' }}
