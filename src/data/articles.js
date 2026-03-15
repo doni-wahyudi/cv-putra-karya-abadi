@@ -6,16 +6,16 @@ export const articles = [
       EN: 'Complete Guide to Choosing Wooden Pallets for Export Needs'
     },
     excerpt: {
-      ID: 'Memilih palet untuk ekspor tidak boleh sembarangan. Ada standar ISPM-15 yang harus dipenuhi agar barang Anda tidak tertahan di bea cukai.',
-      EN: 'Choosing pallets for export should not be random. There are ISPM-15 standards that must be met so your goods are not detained at customs.'
+      ID: 'Memilih palet untuk ekspor tidak boleh sembarangan. Ada standar yang harus dipenuhi agar barang Anda tidak tertahan di bea cukai.',
+      EN: 'Choosing pallets for export should not be random. There are standards that must be met so your goods are not detained at customs.'
     },
     date: '12 Maret 2026',
     author: 'Admin CV Putra Karya Abadi',
     category: { ID: 'Edukasi', EN: 'Education' },
     content: {
       ID: `
-        <h2>Standar ISPM-15: Kunci Ekspor Lancar</h2>
-        <p>Dalam dunia logistik internasional, standar ISPM-15 adalah hal yang wajib dipahami. Singkatan dari International Standards for Phytosanitary Measures No. 15, standar ini mengatur perlakuan terhadap material kemasan kayu guna mencegah penyebaran hama lintas negara.</p>
+        <h2>Standar: Kunci Ekspor Lancar</h2>
+        <p>Dalam dunia logistik internasional, standar adalah hal yang wajib dipahami. Singkatan dari International Standards for Phytosanitary Measures No. 15, standar ini mengatur perlakuan terhadap material kemasan kayu guna mencegah penyebaran hama lintas negara.</p>
         
         <h3>Mengapa Kayu Harus Diproses?</h3>
         <p>Kayu mentah seringkali membawa serangga atau parasit yang dapat merusak ekosistem di negara tujuan. Oleh karena itu, kayu yang digunakan untuk palet ekspor harus melalui salah satu dari dua proses:</p>
@@ -31,7 +31,7 @@ export const articles = [
       `,
       EN: `
         <h2>ISPM-15 Standard: The Key to Smooth Export</h2>
-        <p>In the world of international logistics, the ISPM-15 standard is a must-understand. Standing for International Standards for Phytosanitary Measures No. 15, this standard regulates the treatment of wooden packaging materials to prevent the spread of pests across countries.</p>
+        <p>In the world of international logistics, the standard is a must-understand. Standing for International Standards for Phytosanitary Measures No. 15, this standard regulates the treatment of wooden packaging materials to prevent the spread of pests across countries.</p>
         
         <h3>Why Must Wood Be Processed?</h3>
         <p>Raw wood often carries insects or parasites that can damage ecosystems in the destination country. Therefore, wood used for export pallets must go through one of two processes:</p>

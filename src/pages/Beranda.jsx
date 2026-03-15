@@ -50,7 +50,7 @@ export default function Beranda() {
     {
       icon: <FaTools />,
       title: t({ ID: 'Custom Ukuran', EN: 'Custom Size' }),
-      desc: t({ 
+      desc: t({
         ID: 'Produksi palet & peti sesuai ukuran, desain, dan spesifikasi kebutuhan bisnis Anda.',
         EN: 'Pallet & crate production according to your business size, design, and specifications.'
       })
@@ -129,7 +129,7 @@ export default function Beranda() {
     {
       name: 'Bpk. Ahmad Fauzi',
       role: 'Logistics Manager',
-      company: 'PT. Global Logistik Trans',
+      company: 'Perusahaan Logistik',
       content: t({
         ID: 'Pelayanan sangat cepat dan kualitas palet kayu sangat kokoh. Sangat membantu operasional gudang kami yang memiliki mobilitas tinggi.',
         EN: 'Service is very fast and the quality of the wooden pallets is very sturdy. It really helps our warehouse operations which have high mobility.'
@@ -139,7 +139,7 @@ export default function Beranda() {
     {
       name: 'Ibu Siska Amelia',
       role: 'Procurement Specialist',
-      company: 'IndoManufacture Group',
+      company: 'Perusahaan Manufaktur',
       content: t({
         ID: 'Kami sudah berlangganan peti kayu custom di sini selama 2 tahun. Presisinya luar biasa dan harga sangat kompetitif dibanding supplier lain.',
         EN: 'We have been subscribing to custom wooden crates here for 2 years. The precision is extraordinary and the price is very competitive compared to other suppliers.'
@@ -149,17 +149,17 @@ export default function Beranda() {
     {
       name: 'Bpk. Heru Prasetyo',
       role: 'Operations Director',
-      company: 'Sentosa Ekspor Pratama',
+      company: 'Perusahaan Ekspor',
       content: t({
-        ID: 'Sangat puas dengan standar ISPM-15 yang disediakan. Barang ekspor kami selalu aman dan tidak pernah ada kendala saat masuk ke pelabuhan internasional.',
-        EN: 'Very satisfied with the provided ISPM-15 standards. Our export goods are always safe and there have never been any obstacles when entering international ports.'
+        ID: 'Sangat puas dengan standar yang disediakan. Barang ekspor kami selalu aman dan tidak pernah ada kendala saat masuk ke pelabuhan internasional.',
+        EN: 'Very satisfied with the provided standards. Our export goods are always safe and there have never been any obstacles when entering international ports.'
       }),
       rating: 5
     },
     {
       name: 'Bpk. David Wijaya',
       role: 'Supply Chain Manager',
-      company: 'TechChemical Indonesia',
+      company: 'Perusahaan Kimia',
       content: t({
         ID: 'Respon tim admin sangat cepat dan pengiriman selalu tepat waktu. Material kayu yang digunakan benar-benar berkualitas tinggi.',
         EN: 'The admin team response is very fast and delivery is always on time. The wood material used is truly high quality.'
@@ -169,7 +169,7 @@ export default function Beranda() {
     {
       name: 'Ibu Ratna Sari',
       role: 'Business Owner',
-      company: 'Furniture Hub Export',
+      company: 'Perusahaan Ekspor',
       content: t({
         ID: 'Peti kayu untuk pengiriman furniture kami selalu rapi dan kuat. Customer kami di luar negeri sering memuji keamanan packagingnya.',
         EN: 'Wooden crates for our furniture shipments are always neat and strong. Our customers abroad often praise the safety of the packaging.'
@@ -233,7 +233,7 @@ export default function Beranda() {
     window.open('./CV_Putra_Karya_Abadi.pdf', '_blank');
   };
 
-  const WA_MESSAGE = t({ 
+  const WA_MESSAGE = t({
     ID: 'Halo CV Putra Karya Abadi, saya ingin konsultasi terkait pembuatan palet/peti kayu.',
     EN: 'Hello CV Putra Karya Abadi, I would like to consult regarding pallet/crate production.'
   });
@@ -255,7 +255,7 @@ export default function Beranda() {
               {t({ ID: 'Solusi', EN: 'Solution for' })} <span className="hero__highlight">{t({ ID: 'Palet Kayu', EN: 'Wooden Pallet' })}</span> & <span className="hero__highlight">{t({ ID: 'Peti Kayu', EN: 'Wooden Crate' })}</span> {t({ ID: 'Berkualitas', EN: 'Quality' })}
             </h1>
             <p className="hero__subtitle animate-fade-in-up delay-2">
-              {t({ 
+              {t({
                 ID: 'CV Putra Karya Abadi menyediakan palet kayu dan peti kayu untuk kebutuhan pabrik, gudang logistik, dan ekspor. Bisa custom ukuran, harga langsung pabrik.',
                 EN: 'CV Putra Karya Abadi provides wooden pallets and crates for factory, logistics warehouse, and export needs. Custom sizes available at factory prices.'
               })}
@@ -304,13 +304,13 @@ export default function Beranda() {
                 {t({ ID: 'Berpengalaman & Profesional dalam Pembuatan Palet & Peti Kayu', EN: 'Experienced & Professional in Pallet & Crate Manufacturing' })}
               </h2>
               <p className="about__text">
-                {t({ 
+                {t({
                   ID: 'CV Putra Karya Abadi berkomitmen menjadi solusi utama untuk kebutuhan palet kayu dan peti kayu berkualitas di Indonesia. Kami memahami pentingnya daya angkut, efisiensi ruang, hingga keamanan pengiriman.',
                   EN: 'CV Putra Karya Abadi is committed to being the primary solution for quality wooden pallet and crate needs in Indonesia. We understand the importance of load capacity, space efficiency, and shipping security.'
                 })}
               </p>
               <p className="about__text">
-                {t({ 
+                {t({
                   ID: 'Kami tidak hanya menjual — kami bantu Anda memilih jenis palet dan peti yang paling tepat dan efisien untuk kebutuhan bisnis Anda.',
                   EN: 'We don\'t just sell — we help you choose the most appropriate and efficient pallet and crate types for your business needs.'
                 })}
@@ -380,7 +380,7 @@ export default function Beranda() {
             <span className="section-label">{t({ ID: 'Produk Kami', EN: 'Our Products' })}</span>
             <h2 className="section-title">{t({ ID: 'Solusi Palet & Peti Kayu Custom', EN: 'Custom Pallet & Crate Solutions' })}</h2>
             <p className="section-subtitle">
-              {t({ 
+              {t({
                 ID: 'Kami menyediakan solusi pengemasan kayu yang disesuaikan sepenuhnya dengan kebutuhan spesifik industri Anda.',
                 EN: 'We provide wooden packaging solutions fully customized to your specific industrial needs.'
               })}
@@ -488,8 +488,8 @@ export default function Beranda() {
             </button>
 
             <div className="testimonials__track-container">
-              <div 
-                className="testimonials__track" 
+              <div
+                className="testimonials__track"
                 style={{ '--active-index': activeIndex }}
               >
                 {testimonials.map((item, i) => (
@@ -536,7 +536,7 @@ export default function Beranda() {
           <div className="cta-card reveal">
             <h2 className="cta-card__title">{t({ ID: 'Siap Bermitra dengan Kami?', EN: 'Ready to Partner with Us?' })}</h2>
             <p className="cta-card__desc">
-              {t({ 
+              {t({
                 ID: 'Hubungi tim CV Putra Karya Abadi sekarang & dapatkan penawaran terbaik untuk kebutuhan palet dan peti kayu Anda.',
                 EN: 'Contact CV Putra Karya Abadi team now & get the best offer for your wooden pallet and crate needs.'
               })}

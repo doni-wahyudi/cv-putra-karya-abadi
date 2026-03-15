@@ -15,21 +15,21 @@ export default function FAQ() {
       items: [
         {
           q: t({ ID: 'Apa itu palet kayu?', EN: 'What is a wooden pallet?' }),
-          a: t({ 
+          a: t({
             ID: 'Palet kayu adalah alas datar yang digunakan untuk menopang barang saat penyimpanan atau pengangkutan. Palet membuat proses pemindahan barang lebih mudah dan efisien, terutama dengan alat seperti forklift atau hand pallet.',
             EN: 'A wooden pallet is a flat base used to support goods during storage or transport. Pallets make the process of moving goods easier and more efficient, especially with tools like forklifts or hand pallets.'
           })
         },
         {
           q: t({ ID: 'Apa perbedaan palet kayu dan peti kayu?', EN: 'What is the difference between pallets and crates?' }),
-          a: t({ 
+          a: t({
             ID: 'Palet kayu berfungsi sebagai alas untuk menumpuk dan memindahkan barang, sedangkan peti kayu berfungsi sebagai wadah tertutup untuk melindungi barang dari benturan dan cuaca selama pengiriman.',
             EN: 'A wooden pallet functions as a base for stacking and moving goods, while a wooden crate functions as a closed container to protect goods from impact and weather during shipment.'
           })
         },
         {
           q: t({ ID: 'Apakah palet hanya digunakan untuk pengiriman?', EN: 'Are pallets only used for shipping?' }),
-          a: t({ 
+          a: t({
             ID: 'Tidak. Palet juga bisa digunakan untuk penyimpanan di rak gudang, pengiriman logistik, display di toko atau pameran, dan berbagai kebutuhan industri lainnya.',
             EN: 'No. Pallets can also be used for warehouse shelf storage, logistics shipping, displays in stores or exhibitions, and various other industrial needs.'
           })
@@ -41,23 +41,23 @@ export default function FAQ() {
       items: [
         {
           q: t({ ID: 'Jenis kayu apa yang digunakan?', EN: 'What types of wood are used?' }),
-          a: t({ 
+          a: t({
             ID: 'Kami menggunakan berbagai jenis kayu pilihan seperti kayu pinus, mahoni, meranti, dan jenis kayu keras lainnya sesuai kebutuhan dan budget Anda. Semua kayu yang kami gunakan berkualitas tinggi dan tahan lama.',
             EN: 'We use various types of selected wood such as pine, mahogany, meranti, and other types of hardwood according to your needs and budget. All the wood we use is of high quality and durable.'
           })
         },
         {
           q: t({ ID: 'Apakah bisa custom ukuran?', EN: 'Can the size be customized?' }),
-          a: t({ 
+          a: t({
             ID: 'Tentu! Kami melayani pembuatan palet dan peti kayu dengan ukuran custom sesuai kebutuhan spesifik Anda. Tim kami akan membantu konsultasi untuk menentukan ukuran dan desain yang paling optimal.',
             EN: 'Of course! We provide wooden pallet and crate manufacturing with custom sizes according to your specific needs. Our team will help consult to determine the most optimal size and design.'
           })
         },
         {
           q: t({ ID: 'Apakah peti kayu aman untuk ekspor?', EN: 'Are wooden crates safe for export?' }),
-          a: t({ 
-            ID: 'Ya, kami menyediakan peti kayu khusus ekspor yang telah memenuhi standar ISPM-15 dengan perlakuan Heat Treatment (HT). Sertifikasi ini wajib untuk pengiriman kayu internasional.',
-            EN: 'Yes, we provide special export crates that meet ISPM-15 standards with Heat Treatment (HT). This certification is mandatory for international wood shipments.'
+          a: t({
+            ID: 'Ya, kami menyediakan peti kayu khusus ekspor yang telah memenuhi standar dengan perlakuan Heat Treatment (HT). Sertifikasi ini wajib untuk pengiriman kayu internasional.',
+            EN: 'Yes, we provide special export crates that meet standards with Heat Treatment (HT). This certification is mandatory for international wood shipments.'
           })
         },
       ]
@@ -67,14 +67,14 @@ export default function FAQ() {
       items: [
         {
           q: t({ ID: 'Bagaimana cara memesan?', EN: 'How to order?' }),
-          a: t({ 
+          a: t({
             ID: 'Cukup hubungi kami via WhatsApp, sampaikan kebutuhan Anda (jenis, ukuran, jumlah), dan tim kami akan memberikan penawaran harga beserta estimasi waktu pengerjaan.',
             EN: 'Just contact us via WhatsApp, convey your needs (type, size, quantity), and our team will provide a price quote along with an estimation of processing time.'
           })
         },
         {
           q: t({ ID: 'Berapa lama waktu produksi?', EN: 'How long is the production time?' }),
-          a: t({ 
+          a: t({
             ID: 'Waktu produksi bervariasi tergantung jumlah dan kompleksitas pesanan. Secara umum, untuk pesanan standar membutuhkan waktu 3-7 hari kerja. Untuk pesanan custom atau jumlah besar, akan kami informasikan saat penawaran.',
             EN: 'Production time varies depending on the quantity and complexity of the order. Generally, standard orders take 3-7 business days. For custom or large orders, we will inform you during the quotation process.'
           })
