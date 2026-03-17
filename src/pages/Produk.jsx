@@ -50,7 +50,7 @@ export default function Produk() {
           </h1>
           <p className="produk-hero__subtitle animate-fade-in-up delay-2">
             {t({ 
-              ID: 'Kami memproduksi palet dan peti kayu sesuai kebutuhan industri Anda. Ukuran, ketebalan, dan kapasitas beban dapat disesuaikan sepenuhnya.',
+              ID: 'Kami memproduksi pallet dan peti kayu sesuai kebutuhan industri Anda. Ukuran, ketebalan, dan kapasitas beban dapat disesuaikan sepenuhnya.',
               EN: 'We produce wooden pallets and crates according to your industrial needs. Size, thickness, and load capacity can be fully customized.'
             })}
           </p>
@@ -107,7 +107,7 @@ export default function Produk() {
         <div className="container">
           <div className="produk-cta__card reveal">
             <h2>{t({ ID: 'Butuh Ukuran Khusus?', EN: 'Need Custom Sizes?' })}</h2>
-            <p>{t({ ID: 'Kami melayani pembuatan palet dan peti kayu custom sesuai kebutuhan spesifik Anda. Konsultasi gratis!', EN: 'We serve custom wooden pallet and crate manufacturing according to your specific needs. Free consultation!' })}</p>
+            <p>{t({ ID: 'Kami melayani pembuatan pallet dan peti kayu custom sesuai kebutuhan spesifik Anda. Konsultasi gratis!', EN: 'We serve custom wooden pallet and crate manufacturing according to your specific needs. Free consultation!' })}</p>
             <Link to="/contact" className="btn btn-primary btn-lg">
               {t({ ID: 'Konsultasikan Sekarang', EN: 'Consult Now' })}
             </Link>

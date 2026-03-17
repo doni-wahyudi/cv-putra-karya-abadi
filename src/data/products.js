@@ -3,12 +3,12 @@ import petiImg from '../assets/images/gallery/peti.jpeg';
 
 export const products = [
   {
-    id: 'palet-kayu-custom',
+    id: 'pallet-kayu-custom',
     category: { ID: 'Produk Custom', EN: 'Custom Products' },
-    name: { ID: 'Palet Kayu Custom', EN: 'Custom Wooden Pallet' },
+    name: { ID: 'Pallet Kayu Custom', EN: 'Custom Wooden Pallet' },
     image: palletImg,
     desc: { 
-      ID: 'Palet kayu custom dengan ukuran dan spesifikasi sesuai kebutuhan industri, cocok untuk gudang, distribusi, dan pengiriman ekspor.',
+      ID: 'Pallet kayu custom dengan ukuran dan spesifikasi sesuai kebutuhan industri, cocok untuk gudang, distribusi, dan pengiriman ekspor.',
       EN: 'Custom wooden pallets with sizes and specifications according to industrial needs, suitable for warehouses, distribution, and export shipping.'
     },
     specs: [
@@ -17,10 +17,10 @@ export const products = [
       { label: { ID: 'Kapasitas', EN: 'Capacity' }, value: { ID: 'Disesuaikan', EN: 'Adjustable' } }
     ],
     features: [
-      { ID: 'Palet untuk gudang', EN: 'Warehouse Pallets' },
-      { ID: 'Palet untuk ekspor (ISPM-15)', EN: 'Export Pallets (ISPM-15)' },
-      { ID: 'Palet heavy duty', EN: 'Heavy Duty Pallets' },
-      { ID: 'Palet ukuran khusus', EN: 'Special Size Pallets' }
+      { ID: 'Pallet untuk gudang', EN: 'Warehouse Pallets' },
+      { ID: 'Pallet untuk ekspor (ISPM-15)', EN: 'Export Pallets (ISPM-15)' },
+      { ID: 'Pallet heavy duty', EN: 'Heavy Duty Pallets' },
+      { ID: 'Pallet ukuran khusus', EN: 'Special Size Pallets' }
     ],
     tag: { ID: 'Custom', EN: 'Custom' }
   },

@@ -11,7 +11,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     nama: '',
     perusahaan: '',
-    kebutuhan: 'Palet Kayu Standar',
+    kebutuhan: 'Pallet Kayu Standar',
     jumlah: '',
     pesan: '',
   });
@@ -56,7 +56,7 @@ export default function Contact() {
           </h1>
           <p className="contact-hero__subtitle animate-fade-in-up delay-2">
             {t({ 
-              ID: 'Siap melayani konsultasi dan penawaran untuk kebutuhan palet & peti kayu Anda.',
+              ID: 'Siap melayani konsultasi dan penawaran untuk kebutuhan pallet & peti kayu Anda.',
               EN: 'Ready to serve consultation and quotation for your wooden pallet & crate needs.'
             })}
           </p>
@@ -104,9 +104,9 @@ export default function Contact() {
                       value={form.kebutuhan}
                       onChange={handleChange}
                     >
-                      <option>{t({ ID: 'Palet Kayu Standar', EN: 'Standard Wooden Pallet' })}</option>
-                      <option>{t({ ID: 'Palet Kayu Heavy Duty', EN: 'Heavy Duty Wooden Pallet' })}</option>
-                      <option>{t({ ID: 'Palet Kayu Custom', EN: 'Custom Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Pallet Kayu Standar', EN: 'Standard Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Pallet Kayu Heavy Duty', EN: 'Heavy Duty Wooden Pallet' })}</option>
+                      <option>{t({ ID: 'Pallet Kayu Custom', EN: 'Custom Wooden Pallet' })}</option>
                       <option>{t({ ID: 'Peti Kayu Export', EN: 'Export Wooden Crate' })}</option>
                       <option>{t({ ID: 'Peti Kayu Mesin', EN: 'Machine Wooden Crate' })}</option>
                       <option>{t({ ID: 'Peti Kayu Custom', EN: 'Custom Wooden Crate' })}</option>
@@ -165,7 +165,7 @@ export default function Contact() {
                     <div className="contact-info__icon"><FaEnvelope /></div>
                     <div>
                       <span className="contact-info__label">Email</span>
-                      <a href="mailto:info@putrakaryapalet.com">info@putrakaryapalet.com</a>
+                      <a href="mailto:info@putrakaryapallet.com">info@putrakaryapallet.com</a>
                     </div>
                   </div>
                   <div className="contact-info__item">

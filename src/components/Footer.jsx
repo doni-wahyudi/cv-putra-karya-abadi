@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
-import logo from '../assets/images/logo_cv_putra_karya_abadi.png';
+import logo from '../assets/images/cv_putra_logo_nama.png';
 import './Footer.css';
 
 const WA_NUMBER = '6282112976961';
@@ -19,12 +19,12 @@ export default function Footer() {
               <img src={logo} alt="Logo" className="footer__logo" />
               <div>
                 <h3 className="footer__brand-name">CV Putra Karya Abadi</h3>
-                <p className="footer__brand-tagline">{t({ ID: 'Supplier Palet Kayu & Peti Kayu Berkualitas', EN: 'Quality Wooden Pallet & Crate Supplier' })}</p>
+                <p className="footer__brand-tagline">{t({ ID: 'Supplier Pallet Kayu & Peti Kayu Berkualitas', EN: 'Quality Wooden Pallet & Crate Supplier' })}</p>
               </div>
             </div>
             <p className="footer__brand-desc">
               {t({ 
-                ID: 'Menyediakan palet kayu dan peti kayu berkualitas untuk kebutuhan industri, gudang logistik, dan ekspor. Melayani custom ukuran dan pengiriman seluruh Indonesia.',
+                ID: 'Menyediakan pallet kayu dan peti kayu berkualitas untuk kebutuhan industri, gudang logistik, dan ekspor. Melayani custom ukuran dan pengiriman seluruh Indonesia.',
                 EN: 'Providing quality wooden pallets and crates for industrial, logistics warehouse, and export needs. Serving custom sizes and shipping throughout Indonesia.'
               })}
             </p>
@@ -45,9 +45,9 @@ export default function Footer() {
           <div className="footer__section">
             <h4 className="footer__section-title">{t({ ID: 'Produk', EN: 'Products' })}</h4>
             <ul className="footer__links">
-              <li><Link to="/produk">{t({ ID: 'Palet Kayu Standar', EN: 'Standard Wooden Pallet' })}</Link></li>
-              <li><Link to="/produk">{t({ ID: 'Palet Kayu Heavy Duty', EN: 'Heavy Duty Wooden Pallet' })}</Link></li>
-              <li><Link to="/produk">{t({ ID: 'Palet Kayu Custom', EN: 'Custom Wooden Pallet' })}</Link></li>
+              <li><Link to="/produk">{t({ ID: 'Pallet Kayu Standar', EN: 'Standard Wooden Pallet' })}</Link></li>
+              <li><Link to="/produk">{t({ ID: 'Pallet Kayu Heavy Duty', EN: 'Heavy Duty Wooden Pallet' })}</Link></li>
+              <li><Link to="/produk">{t({ ID: 'Pallet Kayu Custom', EN: 'Custom Wooden Pallet' })}</Link></li>
               <li><Link to="/produk">{t({ ID: 'Peti Kayu Export', EN: 'Export Wooden Crate' })}</Link></li>
               <li><Link to="/produk">{t({ ID: 'Peti Kayu Mesin', EN: 'Machine Wooden Crate' })}</Link></li>
             </ul>
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <FaEnvelope />
-                <a href="mailto:info@putrakaryapalet.com">info@putrakaryapalet.com</a>
+                <a href="mailto:info@putrakaryapallet.com">info@putrakaryapallet.com</a>
               </li>
               <li>
                 <FaMapMarkerAlt />

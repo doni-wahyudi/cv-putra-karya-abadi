@@ -14,23 +14,23 @@ export default function FAQ() {
       category: t({ ID: 'Umum', EN: 'General' }),
       items: [
         {
-          q: t({ ID: 'Apa itu palet kayu?', EN: 'What is a wooden pallet?' }),
+          q: t({ ID: 'Apa itu pallet kayu?', EN: 'What is a wooden pallet?' }),
           a: t({
-            ID: 'Palet kayu adalah alas datar yang digunakan untuk menopang barang saat penyimpanan atau pengangkutan. Palet membuat proses pemindahan barang lebih mudah dan efisien, terutama dengan alat seperti forklift atau hand pallet.',
+            ID: 'Pallet kayu adalah alas datar yang digunakan untuk menopang barang saat penyimpanan atau pengangkutan. Pallet membuat proses pemindahan barang lebih mudah dan efisien, terutama dengan alat seperti forklift atau hand pallet.',
             EN: 'A wooden pallet is a flat base used to support goods during storage or transport. Pallets make the process of moving goods easier and more efficient, especially with tools like forklifts or hand pallets.'
           })
         },
         {
-          q: t({ ID: 'Apa perbedaan palet kayu dan peti kayu?', EN: 'What is the difference between pallets and crates?' }),
+          q: t({ ID: 'Apa perbedaan pallet kayu dan peti kayu?', EN: 'What is the difference between pallets and crates?' }),
           a: t({
-            ID: 'Palet kayu berfungsi sebagai alas untuk menumpuk dan memindahkan barang, sedangkan peti kayu berfungsi sebagai wadah tertutup untuk melindungi barang dari benturan dan cuaca selama pengiriman.',
+            ID: 'Pallet kayu berfungsi sebagai alas untuk menumpuk dan memindahkan barang, sedangkan peti kayu berfungsi sebagai wadah tertutup untuk melindungi barang dari benturan dan cuaca selama pengiriman.',
             EN: 'A wooden pallet functions as a base for stacking and moving goods, while a wooden crate functions as a closed container to protect goods from impact and weather during shipment.'
           })
         },
         {
-          q: t({ ID: 'Apakah palet hanya digunakan untuk pengiriman?', EN: 'Are pallets only used for shipping?' }),
+          q: t({ ID: 'Apakah pallet hanya digunakan untuk pengiriman?', EN: 'Are pallets only used for shipping?' }),
           a: t({
-            ID: 'Tidak. Palet juga bisa digunakan untuk penyimpanan di rak gudang, pengiriman logistik, display di toko atau pameran, dan berbagai kebutuhan industri lainnya.',
+            ID: 'Tidak. Pallet juga bisa digunakan untuk penyimpanan di rak gudang, pengiriman logistik, display di toko atau pameran, dan berbagai kebutuhan industri lainnya.',
             EN: 'No. Pallets can also be used for warehouse shelf storage, logistics shipping, displays in stores or exhibitions, and various other industrial needs.'
           })
         },
@@ -49,7 +49,7 @@ export default function FAQ() {
         {
           q: t({ ID: 'Apakah bisa custom ukuran?', EN: 'Can the size be customized?' }),
           a: t({
-            ID: 'Tentu! Kami melayani pembuatan palet dan peti kayu dengan ukuran custom sesuai kebutuhan spesifik Anda. Tim kami akan membantu konsultasi untuk menentukan ukuran dan desain yang paling optimal.',
+            ID: 'Tentu! Kami melayani pembuatan pallet dan peti kayu dengan ukuran custom sesuai kebutuhan spesifik Anda. Tim kami akan membantu konsultasi untuk menentukan ukuran dan desain yang paling optimal.',
             EN: 'Of course! We provide wooden pallet and crate manufacturing with custom sizes according to your specific needs. Our team will help consult to determine the most optimal size and design.'
           })
         },
@@ -139,7 +139,7 @@ export default function FAQ() {
             <h2>{t({ ID: 'Masih Ada Pertanyaan?', EN: 'Still Have Questions?' })}</h2>
             <p>{t({ ID: 'Tim kami siap membantu menjawab semua pertanyaan Anda melalui WhatsApp.', EN: 'Our team is ready to help answer all your questions via WhatsApp.' })}</p>
             <a
-              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t({ ID: 'Halo, saya ingin bertanya lebih lanjut tentang produk palet/peti kayu.', EN: 'Hello, I would like to ask more about pallet/crate products.' }))}`}
+              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t({ ID: 'Halo, saya ingin bertanya lebih lanjut tentang produk pallet/peti kayu.', EN: 'Hello, I would like to ask more about pallet/crate products.' }))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-lg"

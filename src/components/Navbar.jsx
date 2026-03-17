@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMenu, HiX, HiGlobeAlt } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
-import logo from '../assets/images/logo_cv_putra_karya_abadi.png';
+import logo from '../assets/images/cv_putra_logo_nama.png';
 import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
 
@@ -40,7 +40,7 @@ export default function Navbar() {
           <img src={logo} alt="CV Putra Karya Abadi" className="navbar__logo" />
           <div className="navbar__brand-text">
             <span className="navbar__brand-name">CV Putra Karya Abadi</span>
-            <span className="navbar__brand-tagline">{lang === 'ID' ? 'Palet & Peti Kayu' : 'Pallet & Crate Solution'}</span>
+            <span className="navbar__brand-tagline">{lang === 'ID' ? 'Pallet & Peti Kayu' : 'Pallet & Crate Solution'}</span>
           </div>
         </Link>
 

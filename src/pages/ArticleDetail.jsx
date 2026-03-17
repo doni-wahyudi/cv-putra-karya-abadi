@@ -71,7 +71,7 @@ export default function ArticleDetail() {
             <div className="sidebar-card">
               <h3>{t({ ID: 'Butuh Konsultasi?', EN: 'Need Consultation?' })}</h3>
               <p>{t({ 
-                ID: 'Tim ahli kami siap membantu Anda memilih solusi palet dan peti kayu terbaik untuk bisnis Anda.',
+                ID: 'Tim ahli kami siap membantu Anda memilih solusi pallet dan peti kayu terbaik untuk bisnis Anda.',
                 EN: 'Our expert team is ready to help you choose the best wooden pallet and crate solutions for your business.'
               })}</p>
               <a 

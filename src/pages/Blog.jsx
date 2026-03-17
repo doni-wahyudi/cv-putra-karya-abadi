@@ -40,7 +40,7 @@ export default function Blog() {
         <div className="container">
           <span className="section-label animate-fade-in-up">{t({ ID: 'Artikel & Berita', EN: 'Articles & News' })}</span>
           <h1 className="blog-hero__title animate-fade-in-up delay-1">
-            {t({ ID: 'Wawasan Industri Palet & Peti Kayu', EN: 'Insights on Pallet & Crate Industry' })}
+            {t({ ID: 'Wawasan Industri Pallet & Peti Kayu', EN: 'Insights on Pallet & Crate Industry' })}
           </h1>
           <p className="blog-hero__subtitle animate-fade-in-up delay-2">
             {t({ 

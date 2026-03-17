@@ -8,7 +8,7 @@ Baik. Saya akan buatkan 3 hal sekaligus agar website CV Putra Karya Abadi benar-
 
 1️⃣ Struktur Website Terbaik
 
-Untuk bisnis Palet Kayu & Peti Kayu
+Untuk bisnis Pallet Kayu & Peti Kayu
 
 Struktur ini dibuat agar SEO kuat + buyer mudah order.
 
@@ -16,16 +16,16 @@ Struktur ini dibuat agar SEO kuat + buyer mudah order.
 
 Isi halaman utama:
 	•	Hero section
-Supplier Palet Kayu & Peti Kayu Berkualitas
+Supplier Pallet Kayu & Peti Kayu Berkualitas
 	•	Keunggulan perusahaan
 	•	Kayu berkualitas
 	•	Bisa custom ukuran
 	•	Harga pabrik
 	•	Pengiriman cepat
 	•	Produk utama
-	•	Palet kayu
+	•	Pallet kayu
 	•	Peti kayu
-	•	Palet custom
+	•	Pallet custom
 	•	Peti export
 	•	Industri yang dilayani
 	•	Pabrik
@@ -39,17 +39,17 @@ Supplier Palet Kayu & Peti Kayu Berkualitas
 
 📦 Produk
 
-Palet Kayu
+Pallet Kayu
 Isi halaman:
-	•	pengertian palet
+	•	pengertian pallet
 	•	spesifikasi
 	•	ukuran standar
 	•	foto produksi
 
 Sub halaman:
-	•	Palet Kayu Standar
-	•	Palet Kayu Heavy Duty
-	•	Palet Kayu Custom
+	•	Pallet Kayu Standar
+	•	Pallet Kayu Heavy Duty
+	•	Pallet Kayu Custom
 
 ⸻
 
@@ -81,11 +81,11 @@ Isi:
 Ini senjata SEO paling penting.
 
 Contoh artikel:
-	•	Perbedaan Palet Kayu dan Palet Plastik
-	•	Ukuran Standar Palet Kayu di Indonesia
+	•	Perbedaan Pallet Kayu dan Pallet Plastik
+	•	Ukuran Standar Pallet Kayu di Indonesia
 	•	Fungsi Peti Kayu untuk Ekspor
-	•	Cara Memilih Palet Kayu Berkualitas
-	•	Harga Palet Kayu Terbaru
+	•	Cara Memilih Pallet Kayu Berkualitas
+	•	Harga Pallet Kayu Terbaru
 
 ⸻
 
@@ -104,20 +104,20 @@ Isi:
 Keyword ini sering dipakai buyer industri di Google.
 
 Keyword Utama
-	•	palet kayu
 	•	pallet kayu
-	•	supplier palet kayu
-	•	pabrik palet kayu
-	•	jual palet kayu
+	•	pallet kayu
+	•	supplier pallet kayu
+	•	pabrik pallet kayu
+	•	jual pallet kayu
 
 ⸻
 
 Keyword Produk
-	•	palet kayu murah
-	•	palet kayu heavy duty
-	•	palet kayu custom
-	•	harga palet kayu
-	•	ukuran palet kayu
+	•	pallet kayu murah
+	•	pallet kayu heavy duty
+	•	pallet kayu custom
+	•	harga pallet kayu
+	•	ukuran pallet kayu
 
 ⸻
 
@@ -131,7 +131,7 @@ Keyword Peti Kayu
 ⸻
 
 Keyword Buyer Industri
-	•	supplier palet untuk pabrik
+	•	supplier pallet untuk pabrik
 	•	pallet kayu untuk gudang
 	•	peti kayu pengiriman mesin
 	•	packing kayu ekspor
@@ -151,10 +151,10 @@ Target:
 Minimal 20 artikel SEO
 
 Contoh:
-	•	ukuran palet kayu standar indonesia
-	•	harga palet kayu per pcs
-	•	fungsi palet kayu di gudang
-	•	jenis palet kayu untuk ekspor
+	•	ukuran pallet kayu standar indonesia
+	•	harga pallet kayu per pcs
+	•	fungsi pallet kayu di gudang
+	•	jenis pallet kayu untuk ekspor
 
 Artikel seperti ini sering dicari pabrik.
 
@@ -164,7 +164,7 @@ Strategi 2 — Halaman Produk Detail
 
 Contoh halaman:
 
-putrakaryapalet.com/palet-kayu
+putrakaryapallet.com/pallet-kayu
 
 Isi:
 	•	penjelasan
@@ -185,7 +185,7 @@ Google Maps
 
 Nama:
 
-CV Putra Karya Abadi – Supplier Palet Kayu
+CV Putra Karya Abadi – Supplier Pallet Kayu
 
 Ini bisa mendatangkan order lokal tanpa website pun.
 
@@ -195,7 +195,7 @@ Strategi 4 — Foto Produksi
 
 Upload foto:
 	•	proses produksi
-	•	stok palet
+	•	stok pallet
 	•	pengiriman
 
 Google suka website yang punya gambar asli.
@@ -206,15 +206,15 @@ Google suka website yang punya gambar asli.
 
 Kalau pakai domain:
 
-putrakaryapalet.com
+putrakaryapallet.com
 
 Struktur URL ideal:
 
-putrakaryapalet.com
-putrakaryapalet.com/palet-kayu
-putrakaryapalet.com/peti-kayu
-putrakaryapalet.com/palet-kayu-custom
-putrakaryapalet.com/peti-kayu-ekspor
+putrakaryapallet.com
+putrakaryapallet.com/pallet-kayu
+putrakaryapallet.com/peti-kayu
+putrakaryapallet.com/pallet-kayu-custom
+putrakaryapallet.com/peti-kayu-ekspor
 
 Ini sangat SEO friendly.
 
@@ -224,17 +224,17 @@ Ini sangat SEO friendly.
 
 Judul homepage:
 
-Supplier Palet Kayu & Peti Kayu Berkualitas – CV Putra Karya Abadi
+Supplier Pallet Kayu & Peti Kayu Berkualitas – CV Putra Karya Abadi
 
 Meta description:
 
-CV Putra Karya Abadi supplier palet kayu dan peti kayu untuk pabrik, gudang, dan ekspor. Melayani custom ukuran dan pengiriman seluruh Indonesia.
+CV Putra Karya Abadi supplier pallet kayu dan peti kayu untuk pabrik, gudang, dan ekspor. Melayani custom ukuran dan pengiriman seluruh Indonesia.
 
 ⸻
 
 💡 Rahasia yang jarang orang tahu:
 
-Bisnis seperti palet kayu sangat sedikit yang punya website SEO kuat.
+Bisnis seperti pallet kayu sangat sedikit yang punya website SEO kuat.
 
 Artinya kalau website dibuat dengan benar, bisa cepat ranking di Google.
 
@@ -244,4 +244,4 @@ Kalau kamu mau, saya bisa lanjut bantu buatkan juga:
 
 1️⃣ 20 judul artikel SEO yang bisa mendatangkan buyer pabrik
 2️⃣ struktur landing page yang bisa convert buyer jadi order
-3️⃣ nama domain yang bisa mendominasi pasar palet di Indonesia (ini strategi yang sangat kuat).
+3️⃣ nama domain yang bisa mendominasi pasar pallet di Indonesia (ini strategi yang sangat kuat).

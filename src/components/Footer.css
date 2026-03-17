@@ -18,8 +18,9 @@
 }
 
 .footer__logo {
-  width: 44px;
-  height: 44px;
+  width: auto;
+  max-width: 260px;
+  height: 60px;
   object-fit: contain;
 }
 

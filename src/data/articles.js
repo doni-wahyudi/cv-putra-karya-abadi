@@ -1,12 +1,12 @@
 export const articles = [
   {
-    id: 'cara-memilih-palet-kayu-export',
+    id: 'cara-memilih-pallet-kayu-export',
     title: {
-      ID: 'Panduan Lengkap Memilih Palet Kayu untuk Kebutuhan Ekspor',
+      ID: 'Panduan Lengkap Memilih Pallet Kayu untuk Kebutuhan Ekspor',
       EN: 'Complete Guide to Choosing Wooden Pallets for Export Needs'
     },
     excerpt: {
-      ID: 'Memilih palet untuk ekspor tidak boleh sembarangan. Ada standar yang harus dipenuhi agar barang Anda tidak tertahan di bea cukai.',
+      ID: 'Memilih pallet untuk ekspor tidak boleh sembarangan. Ada standar yang harus dipenuhi agar barang Anda tidak tertahan di bea cukai.',
       EN: 'Choosing pallets for export should not be random. There are standards that must be met so your goods are not detained at customs.'
     },
     date: '12 Maret 2026',
@@ -18,16 +18,16 @@ export const articles = [
         <p>Dalam dunia logistik internasional, standar adalah hal yang wajib dipahami. Singkatan dari International Standards for Phytosanitary Measures No. 15, standar ini mengatur perlakuan terhadap material kemasan kayu guna mencegah penyebaran hama lintas negara.</p>
         
         <h3>Mengapa Kayu Harus Diproses?</h3>
-        <p>Kayu mentah seringkali membawa serangga atau parasit yang dapat merusak ekosistem di negara tujuan. Oleh karena itu, kayu yang digunakan untuk palet ekspor harus melalui salah satu dari dua proses:</p>
+        <p>Kayu mentah seringkali membawa serangga atau parasit yang dapat merusak ekosistem di negara tujuan. Oleh karena itu, kayu yang digunakan untuk pallet ekspor harus melalui salah satu dari dua proses:</p>
         <ul>
           <li><strong>Heat Treatment (HT):</strong> Kayu dipanaskan hingga suhu inti mencapai 56 derajat Celcius selama minimal 30 menit.</li>
           <li><strong>Methyl Bromide (MB) Fumigation:</strong> Kayu difumigasi dengan bahan kimia tertentu.</li>
         </ul>
 
-        <h3>Tips Memilih Palet Export</h3>
-        <p>1. Pastikan ada stempel gandum (standard Mark) pada palet.<br>
+        <h3>Tips Memilih Pallet Export</h3>
+        <p>1. Pastikan ada stempel gandum (standard Mark) pada pallet.<br>
         2. Pilih jenis kayu yang memiliki daya serap kelembaban rendah.<br>
-        3. Sesuaikan ukuran palet dengan standar container (ISO Pallet).</p>
+        3. Sesuaikan ukuran pallet dengan standar container (ISO Pallet).</p>
       `,
       EN: `
         <h2>ISPM-15 Standard: The Key to Smooth Export</h2>
@@ -48,13 +48,13 @@ export const articles = [
     }
   },
   {
-    id: 'keunggulan-palet-kayu-dibanding-plastik',
+    id: 'keunggulan-pallet-kayu-dibanding-plastik',
     title: {
-      ID: 'Palet Kayu vs Palet Plastik: Mana yang Lebih Efisien?',
+      ID: 'Pallet Kayu vs Pallet Plastik: Mana yang Lebih Efisien?',
       EN: 'Wooden Pallet vs Plastic Pallet: Which is More Efficient?'
     },
     excerpt: {
-      ID: 'Perdebatan antara palet kayu dan plastik selalu ada. Mari kita bedah perbandingannya dari sisi biaya dan lingkungan.',
+      ID: 'Perdebatan antara pallet kayu dan plastik selalu ada. Mari kita bedah perbandingannya dari sisi biaya dan lingkungan.',
       EN: 'The debate between wooden and plastic pallets always exists. Let\'s break down the comparison in terms of cost and environment.'
     },
     date: '10 Maret 2026',
@@ -63,13 +63,13 @@ export const articles = [
     content: {
       ID: `
         <h2>Kayu vs Plastik: Perbandingan Head-to-Head</h2>
-        <p>Banyak perusahaan bingung memilih antara palet kayu dan plastik. Meskipun plastik terlihat lebih modern, palet kayu tetap menguasai 90% pasar logistik dunia.</p>
+        <p>Banyak perusahaan bingung memilih antara pallet kayu dan plastik. Meskipun plastik terlihat lebih modern, pallet kayu tetap menguasai 90% pasar logistik dunia.</p>
         
         <h3>1. Investasi Awal</h3>
-        <p>Palet kayu jauh lebih murah (bisa 3-5 kali lipat lebih murah) dibanding palet plastik. Bagi bisnis yang memiliki risiko kehilangan palet tinggi, kayu adalah pilihan paling logis.</p>
+        <p>Pallet kayu jauh lebih murah (bisa 3-5 kali lipat lebih murah) dibanding pallet plastik. Bagi bisnis yang memiliki risiko kehilangan pallet tinggi, kayu adalah pilihan paling logis.</p>
 
         <h3>2. Perbaikan dan Maintenance</h3>
-        <p>Jika satu papan palet kayu patah, Anda bisa menggantinya. Jika palet plastik pecah, Anda harus membuang semuanya. Ini membuat palet kayu lebih ekonomis dalam jangka panjang.</p>
+        <p>Jika satu papan pallet kayu patah, Anda bisa menggantinya. Jika pallet plastik pecah, Anda harus membuang semuanya. Ini membuat pallet kayu lebih ekonomis dalam jangka panjang.</p>
       `,
       EN: `
         <h2>Wood vs Plastic: Head-to-Head Comparison</h2>
@@ -90,7 +90,7 @@ export const articles = [
       EN: 'Eco-Friendly: The Importance of Wood Certification in Modern Logistics'
     },
     excerpt: {
-      ID: 'Dunia semakin peduli pada lingkungan. Ketahui mengapa menggunakan palet dari sumber kayu berkelanjutan bisa meningkatkan nilai brand Anda.',
+      ID: 'Dunia semakin peduli pada lingkungan. Ketahui mengapa menggunakan pallet dari sumber kayu berkelanjutan bisa meningkatkan nilai brand Anda.',
       EN: 'The world is increasingly concerned about the environment. Find out why using pallets from sustainable wood sources can increase your brand value.'
     },
     date: '14 Maret 2026',
@@ -99,16 +99,16 @@ export const articles = [
     content: {
       ID: `
         <h2>Logistik Hijau: Tantangan dan Peluang</h2>
-        <p>Kesadaran akan kelestarian hutan kini menjadi standar industri global. Tidak hanya soal fungsionalitas, pemilihan material palet kini juga mempertimbangkan dampak ekologisnya.</p>
+        <p>Kesadaran akan kelestarian hutan kini menjadi standar industri global. Tidak hanya soal fungsionalitas, pemilihan material pallet kini juga mempertimbangkan dampak ekologisnya.</p>
         
         <h3>Pentingnya Sumber Kayu Legal</h3>
         <p>Kayu yang digunakan harus berasal dari hutan yang dikelola secara bertanggung jawab. Sertifikasi seperti SVLK (Sistem Verifikasi Legalitas Kayu) di Indonesia memastikan bahwa setiap batang kayu yang diolah memiliki legalitas yang jelas.</p>
 
-        <h3>Mengapa Memilih Palet Berkelanjutan?</h3>
+        <h3>Mengapa Memilih Pallet Berkelanjutan?</h3>
         <ul>
           <li><strong>Meningkatkan Kepercayaan Mitra:</strong> Perusahaan multinasional kini mewajibkan supplier untuk memiliki standar eco-friendly.</li>
           <li><strong>Regulasi Internasional:</strong> Banyak negara maju membatasi masuknya produk dari material kayu non-certified.</li>
-          <li><strong>Daur Ulang:</strong> Palet kayu jauh lebih mudah didaur ulang atau dijadikan biomassa dibanding material sintetis.</li>
+          <li><strong>Daur Ulang:</strong> Pallet kayu jauh lebih mudah didaur ulang atau dijadikan biomassa dibanding material sintetis.</li>
         </ul>
       `,
       EN: `
